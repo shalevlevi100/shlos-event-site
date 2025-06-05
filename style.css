@@ -1285,7 +1285,7 @@ url("jeem.jpg") center/cover no-repeat;
   font-size: 1rem;
   line-height: 1.6;
 }
-#accessibility-btn {
+.accessibility-btn {
   position: fixed;
   bottom: 20px;
   left: 20px;

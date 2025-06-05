@@ -188,5 +188,46 @@
       
         setInterval(showNextSlide, 4000); // כל 4 שניות
       </script>
+      <div class="accessibility-wrapper">
+        <button id="accessibility-toggle" class="accessibility-button" aria-label="תפריט נגישות">
+          ♿
+        </button>
+        <div class="accessibility-menu" id="accessibility-menu">
+          <button onclick="increaseFont()">הגדלת טקסט</button>
+          <button onclick="toggleContrast()">ניגודיות גבוהה</button>
+          <button onclick="resetAccessibility()">איפוס</button>
+        </div>
+      </div>
+      <script>
+        const accBtn = document.getElementById('accessibility-btn');
+        let zoom = 1;
+      
+        accBtn.addEventListener('click', () => {
+          zoom += 0.1;
+          if (zoom > 1.5) zoom = 1;
+          document.body.style.zoom = zoom;
+        });
+      </script>
+      <script>
+        const toggleBtn = document.getElementById('accessibility-toggle');
+        const menu = document.getElementById('accessibility-menu');
+      
+        toggleBtn.addEventListener('click', () => {
+          menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        });
+      
+        function increaseFont() {
+          document.body.style.fontSize = 'larger';
+        }
+      
+        function toggleContrast() {
+          document.body.classList.toggle('high-contrast');
+        }
+      
+        function resetAccessibility() {
+          document.body.style.fontSize = '';
+          document.body.classList.remove('high-contrast');
+        }
+      </script>
 </body>
 </html>

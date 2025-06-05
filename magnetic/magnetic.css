@@ -437,4 +437,117 @@ body {
       opacity: 1;
     }
   }
+  .accessibility-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    font-size: 24px;
+    padding: 10px 14px;
+    background: #00d1ff;
+    border: none;
+    border-radius: 50%;
+    color: #111;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .accessibility-button {
+    position: fixed;
+    bottom: 20px; /* מעל הוואטסאפ */
+    left: 20px;
+    background: linear-gradient(to left, #00c6ff, #0072ff);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .accessibility-button:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+  .accessibility-wrapper {
+    position: fixed;
+    bottom: 20px; /* היה 95px */
+    left: 20px;
+    z-index: 999;
+  }
+  
+  .accessibility-button {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+  }
+  
+  .accessibility-button:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .accessibility-menu {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    margin-bottom: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .accessibility-menu button {
+    background: #00c6ff;
+    color: #111;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .accessibility-menu button:hover {
+    background: #0072ff;
+    color: white;
+  }
+  
+  body.high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+  
+  body.high-contrast a,
+  body.high-contrast h1,
+  body.high-contrast h2,
+  body.high-contrast h3,
+  body.high-contrast h4,
+  body.high-contrast h5,
+  body.high-contrast h6 {
+    color: #00ffff !important;
+  }
+  
+  @media (max-width: 768px) {
+    .accessibility-wrapper {
+      bottom: 90px;
+      right: 15px;
+    }
+    .accessibility-menu button {
+      font-size: 13px;
+      padding: 6px 10px;
+    }
+  }
   

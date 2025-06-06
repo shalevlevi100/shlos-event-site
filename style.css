@@ -1398,3 +1398,162 @@ body.high-contrast h6 {
     padding: 6px 10px;
   }
 }
+.contact-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.7)),
+  url("/jeem.jpg") center/cover no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 2px solid #00d9ff;
+}
+
+.contact-section h3 {
+  color: #00d9ff;
+  margin-bottom: 20px;
+}
+.divider-line {
+  height: 3px;
+  background: linear-gradient(to left, #00d9ff, #00aaff);
+  margin: 0px auto;
+  width: 100%;
+  border-radius: 4px;
+}
+.gallery-preview img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.gallery-preview img:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.gallery-preview img:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.gallery-slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  aspect-ratio: 4 / 3; /* יחס ריבועי יותר */
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.slider-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover כדי למלא בלי לעוות */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.slider-image.active {
+  opacity: 1;
+  z-index: 1;
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.gallery-slider {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+}
+
+.hero-overlay-content {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 20px;
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.gallery-slider {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+}
+
+.hero-overlay-content {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.hero-text-box {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 16px;
+  color: white;
+  direction: rtl;
+}
+
+.hero-text-box p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ✅ תיקון למובייל */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .gallery-slider,
+  .hero-overlay-content {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero-text-box {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .hero-text-box p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  .hero-text-box br {
+    display: none; /* ❗ מבטל את השבירה המיותרת במובייל */
+  }
+}

@@ -1,387 +1,876 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shlo’s Event – צילום מגנטים, עמדות צילום ובלוקי עץ לאירועים</title>
-  <meta name="description" content="מגנטים ללא הגבלה, עמדת מיני מי, בלוקי עץ, מגנט זכוכית – חוויה מרגשת ומזכרת יוקרתית מכל אירוע. צוות משפחתי עם שירות מקצועי בכל הארץ.">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17170570865">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <title>שול'ס מגנטים וצילום לאירועים | צילום מגנטים, עמדת צילום ו-Mini Me</title>
 
-  gtag('config', 'AW-17170570865');
-</script>
+    <meta name="description" content="שול'ס מגנטים וצילום לאירועים - צילום מגנטים ללא הגבלה, עמדת צילום מעוצבת, עמדת צילום לאירועים, Mini Me ובלוקי עץ. שירות משפחתי, מקצועי ואישי בכל הארץ.">
+    <meta name="robots" content="index,follow">
+
+    <link rel="canonical" href="https://YOUR-DOMAIN.co.il/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="שול'ס מגנטים וצילום לאירועים">
+    <meta property="og:description" content="צילום מגנטים, עמדות צילום ו-Mini Me ברמה הגבוהה ביותר – חוויה מצולמת שלא שוכחים.">
+    <meta property="og:url" content="https://YOUR-DOMAIN.co.il/">
+    <meta property="og:image" content="https://YOUR-DOMAIN.co.il/iconmagnet.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="שול'ס מגנטים וצילום לאירועים">
+    <meta name="twitter:description" content="מגנטים ללא הגבלה, עמדת צילום מעוצבת, Mini Me ובלוקי עץ – לכל סוגי האירועים.">
+    <meta name="twitter:image" content="https://YOUR-DOMAIN.co.il/iconmagnet.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17170570865"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17170570865');
+    </script>
+
+    <!-- Facebook Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '556683860522789');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=556683860522789&ev=PageView&noscript=1" />
+    </noscript>
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 
- <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '23964898983166742');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=23964898983166742&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-</head>
-<body>
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="menu-toggle" id="menu-toggle">☰</div>
-      <div class="logo">
-        <img src="/logo.png" alt="Shlo's Logo" />
-      </div>
-      <a href="tel:0507787100" class="call-button">📞 050-7787-100</a>
-    </div>
-    <div class="mobile-overlay" id="overlay"></div>
-    <ul class="nav-links" id="nav-links">
-      <button id="close-menu" class="close-button">✕</button>
-      <li><a href="/index.html">ראשי</a></li>
-      <li class="has-dropdown">
-        <a href="#" id="services-link">שירותים <span class="arrow">▾</span></a>
-        <ul class="dropdown-menu">
-          <li><a href="/מעמדי-עץ-מעוצבים/מעמדי-עץ.html">מעמדי עץ + חריטה בהתאמה אישית</a></li>
-          <li><a href="/מגנטים-לאירועים/מגנטים.html">מגנטים</a></li>
-          <li><a href="/עמדת-צילום-לאירועים/עמדת-צילום.html">עמדת צילום</a></li>
-          <li><a href="/מיני-מי/מיני-מי.html">Mini Me</a></li>
-          <li><a href="/בלוק-עץ-לאירועים/בלוק-עץ.html">בלוקי עץ לאירועים</a></li>
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SHLO'S EVENT MAGNETIC & PHOTO",
+      "url": "https://YOUR-DOMAIN.co.il/",
+      "image": "https://YOUR-DOMAIN.co.il/iconmagnet.png",
+      "telephone": "+972-50-7787100",
+      "priceRange": "$$",
+      "areaServed": "Israel",
+      "description": "צילום מגנטים לאירועים, עמדות צילום, Mini Me ובלוקי עץ.",
+      "sameAs": [
+        "https://www.instagram.com/YOUR-INSTAGRAM",
+        "https://www.facebook.com/YOUR-FACEBOOK"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-container">
+          <div class="menu-toggle" id="menu-toggle">☰</div>
+          <div class="logo">
+            <img src="/logo.png" alt="לוגו SHLO's מגנטים וצילום" />
+          </div>
+          <a href="tel:0507787100" class="call-button">📞 050-7787-100</a>
+        </div>
+        <div class="mobile-overlay" id="overlay"></div>
+        <ul class="nav-links" id="nav-links">
+          <button id="close-menu" class="close-button">✕</button>
+          <li><a href="/index.html">ראשי</a></li>
+          <li class="has-dropdown">
+            <a href="#" id="services-link">שירותים <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/מעמדי-עץ-מעוצבים/מעמדי-עץ.html">מעמדי עץ + חריטה בהתאמה אישית</a></li>
+              <li><a href="/מגנטים-לאירועים/מגנטים.html">מגנטים</a></li>
+              <li><a href="/עמדת-צילום-לאירועים/עמדת-צילום.html">עמדת צילום</a></li>
+              <li><a href="/מיני-מי/מיני-מי.html">Mini Me</a></li>
+              <li><a href="/בלוק-עץ-לאירועים/בלוק-עץ.html">בלוקי עץ לאירועים</a></li>
+            </ul>
+          </li>
+          <li><a href="/תמונות-סרטונים-מהאירוע-שלכם/תמונות-סרטונים.html">גלריה</a></li>
+          <li><a href="/שאלות-תשובות-שלכם/שאלות-שלכם.html">שאלות ותשובות</a></li>
+          <li><a href="/אודות/אודות.html">אודות</a></li>
         </ul>
-      </li>
-      <li><a href="/תמונות-סרטונים-מהאירוע-שלכם/תמונות-סרטונים.html">גלריה</a></li>
-      <li><a href="/שאלות-תשובות-שלכם/שאלות-שלכם.html">שאלות ותשובות</a></li>
-      <li><a href="/אודות/אודות.html">אודות</a></li>
-    </ul>
-  </nav>
-</nav>
-<!-- מקטע עלינו -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="gallery-slider">
-      <img src="galyaendsahar.jpeg" alt="Mini Me 1" class="slider-image active">
-      <img src="gakyaandstand.jpeg" alt="Mini Me 2" class="slider-image">
-      <img src="minimestand.JPG" alt="Mini Me 2" class="slider-image">
+      </nav>
 
+      <!-- הירו -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="gallery-slider">
+            <img src="mamadeetz.JPG"עמדת צילום ומגנטים באירוע" class="slider-image active">
+            <img src="emdatneww.JPG" alt="עמדת Mini Me באירוע" class="slider-image">
+            <img src="minimestand.JPG" alt="אורחים נהנים מעמדת צילום באירוע" class="slider-image">
+          </div>
+
+          <div class="hero-overlay-content">
+            <div class="hero-text-box">
+              <a href="https://wa.me/972507787100" target="_blank" class="cta-button">
+                🔔 קבלו הצעת מחיר מהירה בוואטסאפ
+              </a>
+              <a href="/אודות/אודות.html" class="read-more">
+                קרא עוד עלינו →
+              </a>
+
+              <!-- רצועת רשתות חברתיות בהירו -->
+              <div class="social-strip">
+                <span class="social-strip-label">עקבו אחרינו – שם רואים את כל האירועים שלנו:</span>
+
+                <a href="https://www.instagram.com/YOUR-INSTAGRAM" 
+                   target="_blank" 
+                   rel="noopener" 
+                   class="social-pill insta">
+                  <span class="emoji">📸</span>
+                  אינסטגרם
+                </a>
+
+                <a href="https://www.facebook.com/YOUR-FACEBOOK" 
+                   target="_blank" 
+                   rel="noopener" 
+                   class="social-pill fb">
+                  <span class="emoji">📘</span>
+                  פייסבוק
+                </a>
+              </div>
+              <h1 class="hero-main-title">
+                צילום מגנטים ועמדות צילום לאירועים – SHLO'S EVENT
+              </h1>
+              <p class="hero-subtitle">
+                מגנטים ללא הגבלה • עמדת צילום מעוצבת • Mini Me • בלוקי עץ מותאם אישית
+              </p>
+
+              <p class="hero-body">
+                אנחנו שול'ס מגנטים & צילום – עסק משפחתי שמלווה אתכם מהרגע הראשון ועד התמונה האחרונה.
+                המטרה שלנו פשוטה: להפוך כל אירוע לחוויה מצולמת, שמרגישים בה את האהבה, האנרגיה
+                והחיוך של האורחים – גם שנים אחרי שהאירוע נגמר.
+              </p>
+
+              <ul class="hero-bullets">
+                <li>מגנטים חדים ואיכותיים שנשארים על המקרר במשך שנים.</li>
+                <li>עמדת צילום מעוצבת שמתאימה לסגנון ולצבעים של האירוע שלכם.</li>
+                <li>Mini Me ובלוקי עץ – מזכרות שכולם מדברים עליהן.</li>
+                <li>שירות אישי ומשפחתי – אתם לא עוד לקוח, אתם חלק מהאירוע שלנו.</li>
+              </ul>
+
+              <a href="https://wa.me/972507787100" target="_blank" class="cta-button">
+                🔔 קבלו הצעת מחיר מהירה בוואטסאפ
+              </a>
+              <a href="/אודות/אודות.html" class="read-more">
+                קרא עוד עלינו →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- עמדת צילום – תוכן SEO -->
+           <!-- עמדת צילום לאירועים – חוויה חיה באירוע -->
+           <section class="photo-booth-info">
+            <div class="photo-booth-inner photo-booth-layout">
+              <div class="divider-line section-divider"></div
+               טקסט -->
+              <div class="photo-booth-text">
+                <h2>עמדת צילום לאירועים – הלב הפועם של המסיבה</h2>
+    
+                <p>
+                  עמדת צילום טובה לא רק “מצלמת” – היא יוצרת <strong>רגע</strong>.
+                  רגע שבו החברים מצחיקים אחד את השני, המשפחה מתחבקת, והאורחים מרגישים כמו על סט צילומים.
+                  זו הפינה שאליה כולם חוזרים שוב ושוב לאורך הערב.
+                </p>
+    
+                <p>
+                  ב־<strong>SHLO'S EVENT</strong> אנחנו בונים עמדת צילום שהיא
+                  שילוב בין עיצוב מוקפד, תאורה מחמיאה וצוות שמוציא מהאורחים את החיוך הכי טבעי.
+                </p>
+    
+                <h3>מה מיוחד בעמדת הצילום שלנו?</h3>
+                <ul>
+                  <li><strong>עיצוב ברמה של סט צילום:</strong> רקעים, סטיילינג ותאורה שמרגישים כמו קטלוג.</li>
+                  <li><strong>זרימה טבעית באירוע:</strong> האורחים ניגשים לבד – לא צריך “לדחוף” אותם לצילום.</li>
+                  <li><strong>מתאימה לכל גיל:</strong> ילדים, הורים, סבים וסבתות – כולם מוצאים את עצמם בעמדה.</li>
+                  <li><strong>מזכרת מיידית:</strong> משלבים את הצילומים עם מגנטים, Mini Me או מעמדי עץ.</li>
+                </ul>
+    
+                <p>
+                  עמדת הצילום היא המקום שבו כל האורחים עוברים – ולכן היא אחת הנקודות
+                  הכי מצולמות והכי מדוברת באירוע.
+                </p>
+    
+                <a href="https://wa.me/972507787100" target="_blank" class="cta-button pulse">
+                  📸 דברו איתנו על עמדת צילום לאירוע שלכם
+                </a>
+              </div>
+    
+              <!-- גלריה קטנה – תמונות/סרטונים -->
+              <div class="photo-booth-media">
+                <div class="photo-booth-main-media">
+                  <!-- תמונה ראשית – תחליף ל-src שלך -->
+                
+                  
+                 
+                  <div class="video-wrapper">
+                    <video controls poster="emdatneww.JPG">
+                      <source src="videoemadat.MP4" type="video/mp4">
+                      הדפדפן שלך לא תומך בנגן וידאו.
+                    </video>
+                  </div>
+                </div>
+    
+                <div class="photo-booth-thumbs">
+                  <!-- תחליף לכתובות הקבצים האמיתיות שלך -->
+                  <img src="emdatpic.JPG" alt="אורחים בעמדת צילום">
+                  <img src="galya.jpg" alt="צילום מגנטים מעמדת צילום">
+                  <img src="emdanew.jpg" alt="זוג מצטלם בעמדת צילום">
+                  <!-- אם תרצה, אפשר גם לשים כאן iframe של סרטון קצר -->
+                </div>
+              </div>
+    
+            </div>
+          </section>
+          <div class="divider-line section-divider"></div
+          
+          <!-- מעמדי עץ + עמדת צילום – החותמת של האירוע -->
+<section class="wood-stand-section" id="wood-stands">
+  <!-- משתמשים באותו מבנה כמו עמדת הצילום -->
+  <div class="photo-booth-inner photo-booth-layout">
+
+    <!-- טקסט -->
+    <div class="photo-booth-text">
+      <h2>מעמדי עץ מעוצבים + עמדת צילום – הפינה שהאורחים לא שוכחים</h2>
+
+      <p>
+        מעבר למגנטים ולצילום, אחד הדברים שהכי מדברים עליהם אחרי האירועים שלנו הוא
+        <strong>עמדת צילום עם מעמדי עץ מעוצבים וחריטה אישית</strong>. זו פינה שמצטלמת מדהים,
+        מושכת את האורחים ומרגישה כמו משהו שיצא מקטלוג.
+      </p>
+
+      <ul>
+        <li><strong>עבודת יד איכותית:</strong> מעמדי עץ מעוצבים בקפידה, ליטוש נקי וגימור יוקרתי.</li>
+        <li><strong>חריטה בהתאמה אישית:</strong> שמות, תאריך, משפט מיוחד, פסוק או לוגו – מה שתרצו חרוט לנצח.</li>
+        <li><strong>עמדת צילום מסביב למעמדים:</strong> הרקע, התאורה והסטיילינג בנויים כך שהאורחים ירצו להצטלם שוב ושוב.</li>
+        <li><strong>מזכרת שגם נשארת בבית:</strong> אחרי שהאירוע מסתיים – המעמדים הופכים לפריט דקורטיבי מרגש לסלון, למשרד או לחדר.</li>
+      </ul>
+
+      <p>
+        זו העמדה שאנשים מעלים לסטורי, מתייגים, מדברים עליה למחרת בעבודה
+        ושואלים אתכם: <strong>“מאיפה הבאתם את זה?”</strong>.
+      </p>
+
+      <a href="https://wa.me/972507787100" target="_blank" class="cta-button">
+        📸 דברו איתנו על עמדת צילום עם מעמדי עץ
+      </a>
     </div>
-    <div class="hero-overlay-content">
-      <div class="hero-text-box">
-        <h2>עלינו</h2>
-        <p>
-          אנחנו ב־<strong>SHLO’S</strong> מתמחים בצילום מגנטים ואטרקציות לאירועים.<br />
-          אצלנו תמצאו עמדות צילום מעץ מעוצב, עמדות <strong>Mini Me</strong> ייחודיות ומפתיעות,<br />
-          מגנטים עם גימור מקצועי ובלוקי עץ בהתאמה אישית.<br />
-          אנחנו שמים דגש על חוויה אישית, מענה מהיר,<br />
-          ושירות מכל הלב – עם שלל תוספות ועיצובים מיוחדים.<br />
-          <a href="/אודות/אודות.html" class="read-more">קרא עוד עלינו →</a>
-        </p>
+
+    <!-- מדיה – אותו פורמט כמו עמדת צילום -->
+    <div class="photo-booth-media">
+      <div class="photo-booth-main-media">
+        <div class="video-wrapper">
+          <video controls poster="mamadeetz.JPG">
+            <source src="mamadeeyth.mp4" type="video/mp4">
+            הדפדפן שלך לא תומך בנגן וידאו.
+          </video>
+        </div>
+      </div>
+
+      <!-- גלריה קטנה מתחת לווידאו -->
+      <div class="photo-booth-thumbs">
+        <!-- תחליף לנתיבים האמיתיים שלך -->
+        <img src="mamadeetz.JPG" alt="מעמדי עץ מעוצבים באירוע">
+        <img src="mamdeee.jpeg" alt="מעמדי עץ עם חריטה אישית">
+        <img src="galya.jpg" alt="עמדת צילום עם מעמדי עץ">
       </div>
     </div>
+
   </div>
 </section>
+<div class="divider-line section-divider"></div
+                  צילום סטילס וידאו – רמת צילום גבוהה לכל האירוע -->
+           <!-- צילום סטילס וידאו – מספרים את הסיפור של האירוע שלכם -->
+           <section class="stills-video-section" id="stills-video">
+            <div class="stills-video-inner">
+    
+              <div class="stills-video-content">
+                <!-- טקסט -->
+                <div class="stills-video-text">
+                  <h2>צילום סטילס & וידאו – כי אירוע טוב לא מגיע בלי תיעוד ברמה גבוהה</h2>
+    
+                  <p>
+                    המגנטים ועמדת הצילום נותנים חוויה באולם, אבל <strong>צילום סטילס וידאו</strong>
+                    הוא מה שגורם לכם להיזכר בכל רגע מחדש – גם אחרי שהשמלה בארון והחליפה כבר מקופלת.
+                  </p>
+    
+                  <p>
+                    אנחנו משלבים בין צילום דוקומנטרי טבעי לבין רגעים אמנותיים יותר, כאלו
+                    שתופסים מבטים קטנים, חיוך של הורה, חיבוק של סבא, צחוק של חברים.
+                  </p>
+    
+                  <h3>מה אתם מקבלים מאיתנו?</h3>
+                  <ul>
+                    <li><strong>צילום סטילס מקצועי:</strong> פריימים נקיים, זוויות מחמיאות ותיעוד מלא של כל שלב באירוע.</li>
+                    <li><strong>צילום וידאו זורם וקולנועי:</strong> תנועה חלקה, צילומי אווירה ורגעים מרגשים מהחופה/טקס ועד לרחבה.</li>
+                    <li><strong>נוכחות עדינה:</strong> אנחנו שם בכל מקום – אבל בלי להפריע לכם או לאורחים.</li>
+                    <li><strong>עבודה מסודרת:</strong> גיבויים כפולים, כרטיסים נוספים וציוד רזרבי – כדי שלא תאבד אף תמונה.</li>
+                  </ul>
+    
+                  <h3>ואחרי האירוע?</h3>
+                  <ul>
+                    <li>גלריה דיגיטלית מסודרת שנוחה לשיתוף עם המשפחה והחברים.</li>
+                    <li>קליפ Highlight קצר ומרגש שמתמצת את האירוע לכמה דקות של רגש.</li>
+                    <li>אפשרות לקבל צילומים מלאים של חופה / טקס / נאומים.</li>
+                  </ul>
+    
+                  <p>
+                    המטרה שלנו היא שכשאתם תפתחו את התמונות והסרט – תחזרו לשם.
+                    תרגישו שוב את המוסיקה, האנרגיה וההתרגשות כאילו זה קרה אתמול.
+                  </p>
+    
+                  <a href="https://wa.me/972507787100" target="_blank" class="cta-button">
+                    🎬 רוצה הצעת מחיר לצילום סטילס & וידאו?
+                  </a>
+                </div>
+    
+                <!-- מדיה – תמונה/וידאו -->
+                <div class="stills-video-media">   
+                  <img src="saharstils.jpg"צלם סטילס וידאו בפעולה באירוע">
+                </div>
+              </div>
+    
+            </div>
+          </section>
+          <div class="divider-line section-divider"></div
+      צילום סטילס, וידאו ומעמדי עץ -->
+      <section class="stills-video-section" id="stills-video">
+        <div class="stills-video-inner">
+          <h2>צילום סטילס, וידאו ומעמדי עץ – החוויה המלאה באירוע אחד</h2>
 
-  <div class="divider-line"></div>
-    <section class="services-section">
-      <div class="services-overlay">
-        <h2>השירותים שלנו</h2>
-        <p>ב־SHLO'S אנחנו מציעים מגוון שירותים ייחודיים שישדרגו כל אירוע.</p>
-    
-        <div class="services-grid">
-    
-          <div class="service-card">
-            <img src="newmdnetic.jpeg" alt="צילום מגנטים">
-            <h3>צילום מגנטים</h3>
-            <p>צילום מגנטים עם איכות הדפסה גבוהה, גימור מוקפד ומסגרת בעיצוב אישי.</p>
-            <a href="./מגנטים-לאירועים/מגנטים.html" class="cta-button">לשירות</a>
-          </div>
-    
-          <div class="service-card">
-            <img src="/עמדת-צילום-לאירועים/phtowithstand.jpeg" alt="עמדת צילום">
-            <h3>עמדת צילום</h3>
-            <p>עמדת צילום מעוצבת מעץ עם תאורה מקצועית ורקע מעוצב לאירועים מכל הסוגים.</p>
-            <a href="/עמדת-צילום-לאירועים/עמדת-צילום.html" class="cta-button">לשירות</a>
-          </div>
-    
-          <div class="service-card">
-            <img src="newbackgoroungminime.jpeg" alt="Mini Me">
-            <h3>עמדת Mini Me</h3>
-            <p>חוויה ייחודית – בובות מגנטיות אישיות של האורחים, מזכרת מצחיקה ומדליקה!</p>
-            <a href="/מיני-מי/מיני-מי.html" class="cta-button">לשירות</a>
-          </div>
-    
-          <div class="service-card">
-            <img src="blockk.JPG" alt="בלוקי עץ">
-            <h3>בלוקי עץ</h3>
-            <p>הדפסת תמונות על גבי בלוקי עץ איכותיים – מושלם למתנות אישיות.</p>
-            <a href="/בלוק-עץ-לאירועים/בלוק-עץ.html" class="cta-button">לשירות</a>
-          </div>
-    
-          <div class="service-card">
-            <img src="image,a,adeeth.jpeg" alt="מעמדי עץ בהתאמה אישית">
-            <h3>מעמדי עץ מעוצבים</h3>
-            <p>מעמדי עץ מעוצבים + חריטה בהתאמה אישית ועמדת צילום</p>
-            <a href="/מעמדי-עץ-מעוצבים/מעמדי-עץ.html" class="cta-button">לשירות</a>
+          <p>
+            הרבה לקוחות מגיעים אלינו אחרי אירוע ואומרים: "חבל שלא לקחנו גם סטילס, גם וידאו וגם מזכרת מיוחדת".
+            לכן יצרנו חבילות שמשלבות <strong>צילום מגנטים</strong>, <strong>צילום סטילס מקצועי</strong>,
+            <strong>צילום וידאו</strong> ו<strong>מעמדי עץ מעוצבים עם חריטה אישית</strong>.
+          </p>
+
+          <h3>צילום סטילס וידאו לאירועים</h3>
+          <p>
+            צוות הצלמים שלנו יודע לתפוס את הרגעים שאי אפשר לחזור אליהם:
+            ההתרגשות בהכנות, החיוך בחופה, החיבוק של סבא וסבתא, הריקודים והטירוף ברחבה.
+          </p>
+
+          <ul>
+            <li><strong>צילום סטילס לאירועים:</strong> תמונות מקצועיות, עריכה מוקפדת וגלריה דיגיטלית מסודרת.</li>
+            <li><strong>צילום וידאו:</strong> תיעוד מלא או קליפ Highlight – מזכרת מרגשת שאפשר לראות שוב ושוב.</li>
+            <li><strong>שילוב עם מגנטים ועמדת צילום:</strong> גם חוויה חיה לאורחים וגם תיעוד מקצועי בשבילכם.</li>
+          </ul>
+
+          <h3>מעמדי עץ + חריטה + עמדת צילום – הדבר הכי מיוחד באירוע</h3>
+          <p>
+            אחד הדברים שהכי מדברים עליהם אחרי האירועים שלנו הוא
+            <strong>עמדת צילום עם מעמדי עץ מעוצבים וחריטה אישית</strong>. זה לא עוד גימיק –
+            זו פינה יפהפייה באירוע שמושכת את כל האורחים.
+          </p>
+
+          <ul>
+            <li><strong>מעמדי עץ בעיצוב יוקרתי:</strong> עבודת יד, ליטוש איכותי והתאמה מלאה לסגנון האירוע.</li>
+            <li><strong>חריטה בהתאמה אישית:</strong> שמות, תאריך, משפט מרגש, פסוק, לוגו עסקי – מה שתרצו.</li>
+            <li><strong>עמדת צילום מעוצבת סביב המעמדים:</strong> האורחים מצטלמים, מקבלים מגנט / תמונה,
+              ואתם נשארים עם מעמדי עץ שהם מזכרת דקורטיבית לבית.</li>
+            <li><strong>הדרן של האירוע:</strong> זו העמדה שאורחים מצלמים, מעלים לסטורי ומתייגים –
+              מה שהופך את האירוע שלכם לבלתי נשכח.</li>
+          </ul>
+
+          <p>
+            כשאתם משלבים בין <strong>סטילס, וידאו, מגנטים</strong> ו<strong>מעמדי עץ מעוצבים</strong>,
+            אתם לא רק "מסמנים וי" על צילום באירוע – אתם בונים חוויה שלמה, מהקליק הראשון
+            ועד המתנה שבבית.
+          </p>
+
+          <a href="https://wa.me/972507787100" target="_blank" class="cta-button">
+            🎬 דברו איתנו על חבילת סטילס, וידאו ומעמדי עץ
+          </a>
+        </div>
+      </section>
+      <div class="divider-line"></div>
+      <div class="divider-line"></div>
+
+      <!-- שירותים -->
+      <section class="services-section">
+        <div class="services-overlay">
+          <h2>השירותים שלנו</h2>
+          <p>
+            ב־SHLO'S EVENT אנחנו מאמינים שאין שני אירועים זהים. לכן בנינו כמה שירותי צילום
+            ומזכרות שאפשר לשלב יחד או לבחור בנפרד, לפי התקציב וסגנון האירוע:
+          </p>
+          <ul class="hero-bullets">
+            <li>מגנטים חדים ואיכותיים שנשארים על המקרר במשך שנים.</li>
+            <li>עמדת צילום מעוצבת שמתאימה לסגנון ולצבעים של האירוע שלכם.</li>
+            <li>צילום סטילס וידאו לאירועים – חבילת צילום מלאה שמספרת את כל הסיפור של הערב.</li>
+            <li>מעמדי עץ מעוצבים עם חריטה אישית + עמדת צילום – הפינה הכי מיוחדת באירוע.</li>
+            <li>שירות אישי ומשפחתי – אתם לא עוד לקוח, אתם חלק מהאירוע שלנו.</li>
+          </ul>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <img src="newmdnetic.jpeg" alt="צילום מגנטים לאירועים">
+              <h3>צילום מגנטים</h3>
+              <p>מגנטים באיכות צילום גבוהה, הדפסה חדה, נייר איכותי ומגנט שמחזיק לאורך זמן.</p>
+              <a href="/מגנטים-לאירועים/מגנטים.html" class="cta-button">לפרטים על צילום מגנטים</a>
+            </div>
+
+            <div class="service-card">
+              <img src="/עמדת-צילום-לאירועים/phtowithstand.jpeg" alt="עמדת צילום לאירועים">
+              <h3>עמדת צילום</h3>
+              <p>עמדת צילום מעוצבת מעץ עם תאורה מקצועית ורקע מתאים – קליק אחד ותמונה מושלמת.</p>
+              <a href="/עמדת-צילום-לאירועים/עמדת-צילום.html" class="cta-button">לפרטים על עמדת צילום</a>
+            </div>
+
+            <div class="service-card">
+              <img src="newbackgoroungminime.jpeg" alt="עמדת Mini Me לאירועים">
+              <h3>עמדת Mini Me</h3>
+              <p>בובות מגנטיות אישיות של האורחים – חוויה הומוריסטית ומזכרת מקורית שלא שוכחים.</p>
+              <a href="/מיני-מי/מיני-מי.html" class="cta-button">לפרטים על Mini Me</a>
+            </div>
+
+            <div class="service-card">
+              <img src="blockk.JPG" alt="בלוקי עץ מעוצבים לאירועים">
+              <h3>בלוקי עץ</h3>
+              <p>הדפסה איכותית על בלוקי עץ – מתנה מרגשת לסבא וסבתא, הורים וחברים קרובים.</p>
+              <a href="/בלוק-עץ-לאירועים/בלוק-עץ.html" class="cta-button">לפרטים על בלוקי עץ</a>
+            </div>
+
+            <div class="service-card">
+              <img src="image,a,adeeth.jpeg" alt="מעמדי עץ בהתאמה אישית">
+              <h3>מעמדי עץ מעוצבים</h3>
+              <p>
+                מעמדי עץ בעבודת יד עם חריטה אישית – שמות, תאריך או לוגו – שניתן לשלב יחד עם עמדת צילום
+                כפינה מיוחדת באירוע. האורחים מצטלמים, ואתם נשארים עם מעמד עץ שהוא גם מזכרת וגם פריט דקורטיבי.
+              </p>
+              <a href="/מעמדי-עץ-מעוצבים/מעמדי-עץ.html" class="cta-button">לפרטים על מעמדי עץ</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- מקטע יצירת קשר -->
-<section class="contact-section">
-  <div class="contact-overlay-content">
-    <h3 class="section-subtitle">שול״ס מגנטים & צילום</h3>
-    <form class="contact-form" name="submit-to-google-sheet" id="main-contact-form">
-      <input type="text" name="name" placeholder="שם מלא" required>
-      <input type="tel" name="phone" placeholder="מספר טלפון" required>
-      <input type="email" name="email" placeholder="אימייל (לא חובה)">
-      <button type="submit">שלח פרטים</button>
-      <p id="form-msg" style="color: white; font-weight: bold; margin-top: 10px;"></p>
-    </form>
-  </div>
-</section>
-  </header>
-  <section class="why-choose-section">
-    <div class="why-choose-overlay">
-      <h2 class="section-title-highlight">למה לבחור ב־SHLO’S?</h2>
-  
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <img src="sdfef.svg" alt="צילום מקצועי">
-          <h3>צילום מקצועי</h3>
-          <p>ציוד צילום מקצועי ברמה גבוהה</p>
+      </section>
+
+      <!-- יצירת קשר -->
+      <section class="contact-section">
+        <div class="contact-overlay-content">
+          <h3 class="section-subtitle">שול״ס מגנטים & צילום – נשמח לחזור אליכם</h3>
+          <p class="contact-text">
+            השאירו פרטים, ספרו לנו איזה אירוע אתם חוגגים, ואנחנו נחזור אליכם עם הצעה מותאמת.
+          </p>
+          <form class="contact-form" name="submit-to-google-sheet" id="main-contact-form">
+            <input type="text" name="name" placeholder="שם מלא" required>
+            <input type="tel" name="phone" placeholder="מספר טלפון" required>
+            <input type="email" name="email" placeholder="אימייל (לא חובה)">
+            <textarea name="details" rows="3" placeholder="ספרו לנו קצת על האירוע – סוג, תאריך, כמות אורחים..." ></textarea>
+            <button type="submit">שלח פרטים</button>
+            <p id="form-msg"></p>
+          </form>
         </div>
-        <div class="benefit-card">
-          <img src="ndenticcc.svg" alt="מגנטים איכותיים">
-          <h3>מגנטים איכותיים</h3>
-          <p>מגנטים עמידים, איכותיים עם גימור מבריק</p>
+      </section>
+
+      <!-- למה לבחור בנו -->
+      <section class="why-choose-section">
+        <div class="why-choose-overlay">
+          <h2 class="section-title-highlight">למה לבחור ב־SHLO'S?</h2>
+          <p class="why-intro">
+            יש הרבה ספקים של צילום מגנטים ועמדות צילום. מה שמבדיל אותנו הוא השילוב בין יחס אישי,
+            עבודה מקצועית, הקפדה על כל פרט קטן והרגשה אמיתית של אכפתיות באירוע שלכם.
+          </p>
+
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <img src="sdfef.svg" alt="צילום מקצועי">
+              <h3>צילום מקצועי</h3>
+              <p>ציוד צילום מתקדם, עדשות איכותיות ותאורה נכונה שמוציאים מכל אורח את הגרסה הכי יפה שלו.</p>
+              <ul>
+                <li>צילום חד גם באולמות חשוכים.</li>
+                <li>התאמת הצילום לסגנון האירוע.</li>
+              </ul>
+            </div>
+
+            <div class="benefit-card">
+              <img src="ndenticcc.svg" alt="מגנטים איכותיים">
+              <h3>מגנטים איכותיים</h3>
+              <p>מגנטים עבים, ציפוי מבריק והדפסה שלא דוהה – כדי שהתמונה תישאר על המקרר לשנים קדימה.</p>
+              <ul>
+                <li>שימוש בחומרים איכותיים בלבד.</li>
+                <li>בקרה על כל מגנט לפני שהוא יוצא לאורח.</li>
+              </ul>
+            </div>
+
+            <div class="benefit-card">
+              <img src="dedede.svg" alt="שירות מכל הלב">
+              <h3>שירות מכל הלב</h3>
+              <p>צוות חייכן, סבלני ואכפתי שמלווה אתכם לפני, בזמן ואחרי האירוע.</p>
+              <ul>
+                <li>זמינות לשאלות ותיאומים.</li>
+                <li>גמישות בשעות ובבקשות מיוחדות.</li>
+              </ul>
+            </div>
+
+            <div class="benefit-card">
+              <img src="grgr.svg" alt="עיצוב אישי">
+              <h3>עיצוב אישי</h3>
+              <p>מסגרת מגנט מעוצבת לפי הצבעים, הלוגו והאווירה של האירוע שלכם – עד שהכל מרגיש נכון.</p>
+              <ul>
+                <li>שילוב לוגו, שמות ותאריך.</li>
+                <li>אפשרות לשפה גרפית תואמת להזמנה.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="benefit-card">
-          <img src="dedede.svg" alt="שירות מכל הלב">
-          <h3>שירות מכל הלב</h3>
-          <p>צוות אמין, חייכן וקשוב לאורך כל האירוע</p>
+      </section>
+
+      <!-- שאלות נפוצות – SEO מעולה -->
+      <section class="faq-section">
+        <div class="faq-inner">
+          <h2>שאלות נפוצות על צילום מגנטים ועמדות צילום</h2>
+
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>מתי כדאי לסגור צלם מגנטים או עמדת צילום?</h3>
+              <p>
+                מומלץ לסגור צלם מגנטים ועמדת צילום כמה שיותר מוקדם, במיוחד בעונות החתונות והחגים.
+                לרוב הלקוחות סוגרים אותנו בין חודשיים לחצי שנה לפני האירוע.
+              </p>
+              <ul>
+                <li>חגים וקיץ – הביקוש גבוה במיוחד.</li>
+                <li>לאירוע קרוב – שווה לבדוק איתנו זמינות גם “בדקה ה־90”.</li>
+              </ul>
+            </div>
+
+            <div class="faq-item">
+              <h3>האם יש מגבלה על כמות המגנטים?</h3>
+              <p>
+                ברוב החבילות שלנו המגנטים הם <strong>ללא הגבלה</strong>, כדי שהאורחים יוכלו להצטלם שוב ושוב.
+                אנחנו מדפיסים כמה עותקים שצריך לכל תמונה – למשפחה, לזוג ולחברים.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>מה ההבדל בין צילום מגנטים לעמדת צילום?</h3>
+              <p>
+                צלם מגנטים יכול לעבור ברחבה ולצלם אורחים, בעוד שעמדת צילום היא מקום קבוע ומעוצב
+                שבו האורחים עוצרים, עושים פוזות ומקבלים חוויה מלאה.
+              </p>
+              <ul>
+                <li>עמדת צילום – חוויה, אביזרים ורקע.</li>
+                <li>מגנטים – המזכרת הפיזית שהולכת הביתה עם האורחים.</li>
+              </ul>
+            </div>
+
+            <div class="faq-item">
+              <h3>איפה אתם עובדים בארץ?</h3>
+              <p>
+                אנחנו מגיעים לאירועים בכל רחבי הארץ, בכפוף לזמינות ולמיקום האירוע.
+                באזורים רחוקים במיוחד ייתכן שתהיה תוספת נסיעה סמלית.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="benefit-card">
-          <img src="grgr.svg" alt="עיצוב אישי">
-          <h3>עיצוב אישי</h3>
-          <p>עיצוב מותאם אישית לכל לקוח לפי אופי האירוע</p>
+      </section>
+      <!-- גלריית תמונות וסרטונים -->
+      <section class="media-gallery-section" id="home-gallery">
+        <div class="media-gallery-inner">
+          <h2 class="media-gallery-title">תמונות וסרטונים מאירועים</h2>
+          <p class="media-gallery-intro">
+            הצצה קטנה לאווירה באירועים שלנו – עמדות צילום, מגנטים, Mini Me, בלוקי עץ ועוד.
+            את התמונות והסרטונים כאן תוכלו להחליף בקלות לתוכן שלכם.
+          </p>
+
+          <!-- גלריית תמונות -->
+          <h3 class="media-sub-title">גלריית תמונות</h3>
+          <div class="media-grid images-grid">
+
+            <!-- תמונה 1 -->
+            <div class="media-item image-item">
+              <img src="mamadeeyth.mp4" alt="צילום מגנטים באירוע" loading="lazy">
+            </div>
+
+            <!-- תמונה 2 -->
+            <div class="media-item image-item">
+              <img src="emdanew.jpg" alt="עמדת צילום מעוצבת באירוע" loading="lazy">
+            </div>
+
+            <!-- תמונה 3 -->
+            <div class="media-item image-item">
+              <img src="emdatpic.JPG" alt="Mini Me – בובות מגנט באירוע" loading="lazy">
+            </div>
+
+            <!-- תמונה 4 -->
+            <div class="media-item image-item">
+              <img src="mamdeee.jpeg" alt="בלוקי עץ מודפסים למזכרת" loading="lazy">
+            </div>
+
+            <!-- תמונה 5 -->
+            <div class="media-item image-item">
+              <img src="emdatneww.JPG" alt="האורחים מצטלמים בעמדת צילום" loading="lazy">
+            </div>
+
+            <!-- תמונה 6 -->
+            <div class="media-item image-item">
+              <img src="gallery/photo-6.jpg" alt="צילום מגנטים מהאירוע שלכם" loading="lazy">
+            </div>
+          </div>
+
+          <!-- גלריית סרטונים -->
+          <h3 class="media-sub-title videos-title">סרטונים מהשטח</h3>
+          <p class="media-gallery-intro small">
+            כאן אפשר להוסיף סרטוני וידאו קצרים מהאירועים – קבצי MP4 מהמצלמה או הטמעה מיוטיוב / אינסטגרם.
+          </p>
+
+          <div class="media-grid videos-grid">
+            <!-- וידאו מקומי – החלף לנתיב הנכון -->
+            <div class="media-item video-item">
+              <video src="mamadeeyth.mp4" controls playsinline></video>
+            </div>
+
+            <!-- וידאו נוסף -->
+            <div class="media-item video-item">
+              <video src="videos/event-2.mp4" controls playsinline></video>
+            </div>
+
+            <!-- דוגמה ל־YouTube – אפשר למחוק אם לא צריך -->
+            <div class="media-item video-item">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="סרטון מאירוע"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="reviews-section">
-    <h2>לקוחות ממליצים</h2>
-    <div class="reviews-container">
-      <div class="review-card">
-        <p class="review-text">השירות היה פשוט מדהים! כל האורחים עפו על עמדת הצילום והמגנטים יצאו מושלמים. תודה על חוויה בלתי נשכחת!</p>
-        <p class="review-author">– לירון, חתונה</p>
-        <div class="review-rating">⭐⭐⭐⭐⭐</div>
-      </div>
-      <div class="review-card">
-        <p class="review-text">עמדת Mini Me גנבה את ההצגה! מקצועיים, אדיבים, ותוצאה ברמה הכי גבוהה. ממליץ בחום!</p>
-        <p class="review-author">– יואב, בר מצווה</p>
-        <div class="review-rating">⭐⭐⭐⭐⭐</div>
-      </div>
-      <div class="review-card">
-        <p class="review-text">שירות אישי מהשיחה הראשונה ועד סוף האירוע. תודה על הכל!</p>
-        <p class="review-author">– עדי, אירוע חברה</p>
-        <div class="review-rating">⭐⭐⭐⭐⭐</div>
-      </div>
-    </div>
-  </section>
-  <section class="review-form-section">
-    <h2 class="review-form-title">השאירו לנו ביקורת</h2>
-    <form class="review-form" id="review-form" action="#" method="POST">
-      <input type="text" name="name" placeholder="שמך המלא" required>
-      <input type="text" name="eventType" placeholder="סוג האירוע (למשל: חתונה)" required>
-      <textarea name="review" rows="5" placeholder="כתוב את הביקורת שלך כאן..." required></textarea>
-      <button type="submit">שלח ביקורת</button>
-      <p id="review-msg" style="color: white; font-weight: bold; margin-top: 10px;"></p>
-    </form>
-  </section>
-  <footer class="custom-footer">
+      </section>
+      <!-- המלצות -->
+      <section class="reviews-section">
+        <h2>לקוחות ממליצים</h2>
+        <div class="reviews-container">
+          <div class="review-card">
+            <p class="review-text">
+              השירות היה פשוט מדהים! כל האורחים עפו על עמדת הצילום והמגנטים יצאו מושלמים.
+              תודה על חוויה בלתי נשכחת!
+            </p>
+            <p class="review-author">– לירון, חתונה</p>
+            <div class="review-rating">⭐⭐⭐⭐⭐</div>
+          </div>
+          <div class="review-card">
+            <p class="review-text">
+              עמדת Mini Me גנבה את ההצגה! מקצועיים, אדיבים ותוצאה ברמה הכי גבוהה. ממליץ בחום.
+            </p>
+            <p class="review-author">– יואב, בר מצווה</p>
+            <div class="review-rating">⭐⭐⭐⭐⭐</div>
+          </div>
+          <div class="review-card">
+            <p class="review-text">
+              שירות אישי מהשיחה הראשונה ועד סוף האירוע. הרגשנו שאתם איתנו באמת, ולא רק “עוד ספק”.
+            </p>
+            <p class="review-author">– עדי, אירוע חברה</p>
+            <div class="review-rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- טופס ביקורת -->
+      <section class="review-form-section">
+        <h2 class="review-form-title">השאירו לנו ביקורת</h2>
+        <form class="review-form" id="review-form" action="#" method="POST">
+          <input type="text" name="name" placeholder="שמך המלא" required>
+          <input type="text" name="eventType" placeholder="סוג האירוע (למשל: חתונה)" required>
+          <textarea name="review" rows="5" placeholder="כתוב את הביקורת שלך כאן..." required></textarea>
+          <button type="submit">שלח ביקורת</button>
+          <p id="review-msg"></p>
+        </form>
+      </section>
+    </main>
+
     <div class="footer-content">
       <h2 class="footer-title">SHLO'S - EVENT MAGNETIC & PHOTO</h2>
       <p>החוויות הכי מרגשות נשארות איתך לתמיד – ואנחנו כאן כדי לתעד אותן בצורה הכי ייחודית שיש.</p>
+
+      <div class="footer-social-text">
+        רוצים לראות איך זה נראה בלייב? הצטרפו אלינו באינסטגרם ובפייסבוק:
+      </div>
+
       <div class="social-icons">
-        <a href="https://wa.me/972507787100" target="_blank" aria-label="וואטסאפ">📱</a>
-        <a href="https://www.instagram.com" target="_blank" aria-label="אינסטגרם">📸</a>
-        <a href="https://www.facebook.com" target="_blank" aria-label="פייסבוק">📘</a>
+        <a href="https://wa.me/972507787100" 
+           target="_blank" 
+           aria-label="וואטסאפ" 
+           class="social-circle wa">📱</a>
+
+        <a href="https://www.instagram.com/shlosevent_magnetic?igsh=MTFmOWpmcjd4bnViag%3D%3D&utm_source=qr" 
+           target="_blank" 
+           aria-label="אינסטגרם" 
+           class="social-circle ig">📸</a>
+
+        <a href="https://www.facebook.com/YOUR-FACEBOOK" 
+           target="_blank" 
+           aria-label="פייסבוק" 
+           class="social-circle fb">📘</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 כל הזכויות שמורות ל־ SHLO'S EVENT MAGNETIC & PHOTO</p>
+
+    <!-- וואטסאפ צף -->
+    <a href="https://wa.me/972507787100" class="whatsapp-fab" target="_blank" aria-label="שלח הודעה בוואטסאפ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="white">
+        <path d="M19.11 17.27c-.29-.15-1.7-.84-1.96-.94s-.45-.14-.64.14-.74.93-.91 1.13-.34.21-.63.07-1.23-.45-2.35-1.44c-.87-.78-1.46-1.74-1.63-2.04s-.02-.45.12-.6c.13-.14.29-.36.44-.54s.2-.29.3-.48.05-.36-.02-.5-.64-1.54-.88-2.11c-.23-.56-.47-.48-.64-.49-.17 0-.36-.01-.56-.01s-.52.07-.79.36c-.27.29-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.21 5.08 4.5.71.3 1.27.48 1.7.61.71.23 1.36.2 1.87.12.57-.08 1.7-.7 1.94-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.35M16 3a13 13 0 0 1 11.19 19.63l1.61 5.9-6.08-1.6a13 13 0 1 1-6.72-23.93zm0 2.6a10.4 10.4 0 1 0 3.64 20.13l.54.15 3.56.93-.93-3.44-.15-.54A10.4 10.4 0 0 0 16 5.6z" />
+      </svg>
+    </a>
+
+    <!-- נגישות -->
+    <div class="accessibility-wrapper">
+      <button id="accessibility-toggle" class="accessibility-button" aria-label="תפריט נגישות">
+        ♿
+      </button>
+      <div class="accessibility-menu" id="accessibility-menu">
+        <button onclick="increaseFont()">הגדלת טקסט</button>
+        <button onclick="toggleContrast()">ניגודיות גבוהה</button>
+        <button onclick="resetAccessibility()">איפוס</button>
+      </div>
     </div>
-  </footer>
 
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    const overlay = document.getElementById('overlay');
-    const closeBtn = document.getElementById('close-menu');
-    const dropdown = document.querySelector('.has-dropdown');
-    const servicesLink = document.getElementById('services-link');
+    <!-- JS תפריט ותנועה -->
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+      const overlay = document.getElementById('overlay');
+      const closeBtn = document.getElementById('close-menu');
+      const dropdown = document.querySelector('.has-dropdown');
+      const servicesLink = document.getElementById('services-link');
 
-    toggle.addEventListener('click', () => {
-      navLinks.classList.add('active');
-      overlay.classList.add('active');
-    });
+      toggle.addEventListener('click', () => {
+        navLinks.classList.add('active');
+        overlay.classList.add('active');
+      });
 
-    closeBtn.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      overlay.classList.remove('active');
-    });
+      closeBtn.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+      });
 
-    overlay.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      overlay.classList.remove('active');
-      dropdown.classList.remove('open');
-    });
-
-    servicesLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      dropdown.classList.toggle('open');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!dropdown.contains(e.target) && !servicesLink.contains(e.target)) {
+      overlay.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
         dropdown.classList.remove('open');
+      });
+
+      servicesLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target) && !servicesLink.contains(e.target)) {
+          dropdown.classList.remove('open');
+        }
+      });
+    </script>
+
+    <!-- טופס יצירת קשר -->
+    <script>
+      const form = document.getElementById('main-contact-form');
+      const msg = document.getElementById('form-msg');
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbygbMEYCIOvJivdnJ3-ydIiaJa3j-Azs9f4UVLD6wf0CUCtENnWiENkh9BDtvDW2a06kg/exec';
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        fetch(scriptURL, {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(text => {
+          msg.innerHTML = "✅ הפנייה נשלחה בהצלחה!";
+          msg.style.color = "#22c55e";
+          form.reset();
+        })
+        .catch(error => {
+          console.error("שגיאה:", error);
+          msg.innerHTML = "❌ אירעה שגיאה, אבל אפשר גם לנסות ליצור קשר בוואטסאפ.";
+          msg.style.color = "#f97373";
+        });
+      });
+    </script>
+
+    <!-- טופס ביקורת -->
+    <script>
+      const reviewForm = document.getElementById('review-form');
+      const reviewMsg = document.getElementById('review-msg');
+      const reviewScriptURL = 'https://script.google.com/macros/s/AKfycbxWV4_3-QuHquJ5PCmclkxNkziVhpSI9eCqiaRHHhsuWL0Tm-rjYoBI_clq4OhW0Y3i5A/exec';
+
+      reviewForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const formData = new FormData(reviewForm);
+
+        fetch(reviewScriptURL, {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(text => {
+          reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
+          reviewMsg.style.color = "#22c55e";
+          reviewForm.reset();
+        })
+        .catch(error => {
+          console.error("שגיאה:", error);
+          reviewMsg.innerHTML = "❌ לא הצלחנו לשלוח את הביקורת, נסו שוב מאוחר יותר.";
+          reviewMsg.style.color = "#f97373";
+        });
+      });
+    </script>
+
+    <!-- נגישות בסיסית -->
+    <script>
+      const toggleBtn = document.getElementById('accessibility-toggle');
+      const menu = document.getElementById('accessibility-menu');
+
+      toggleBtn.addEventListener('click', () => {
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+      });
+
+      function increaseFont() {
+        document.body.style.fontSize = '18px';
       }
-    });
-    
-  </script>
-  <script>
-const form = document.getElementById('main-contact-form');
-const msg = document.getElementById('form-msg');
-const scriptURL = 'https://script.google.com/macros/s/AKfycbygbMEYCIOvJivdnJ3-ydIiaJa3j-Azs9f4UVLD6wf0CUCtENnWiENkh9BDtvDW2a06kg/exec';
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  const formData = new FormData(form);
-
-  fetch(scriptURL, {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => response.text())
-.then(text => {
-  console.log("תשובת שרת:", text);
-  if (text.trim().toLowerCase().includes("ok")) {
-    msg.innerHTML = "✅ הפנייה נשלחה בהצלחה!";
-    msg.style.color = "#00ffae";
-    form.reset();
-  } else {
-    msg.innerHTML = "✅ הפנייה נשלחה בהצלחה!";
-    msg.style.color = "#00ffae";
-  }
-})
-.catch(error => {
-  console.error("שגיאה ב-fetch:", error);
-  msg.innerHTML = "✅ הפנייה נשלחה בהצלחה!";
-  msg.style.color = "#00ffae";
-});
-});
-  </script>
-  <script>
- 
-  const reviewForm = document.getElementById('review-form');
-  const reviewMsg = document.getElementById('review-msg');
-  const reviewScriptURL = 'https://script.google.com/macros/s/AKfycbxWV4_3-QuHquJ5PCmclkxNkziVhpSI9eCqiaRHHhsuWL0Tm-rjYoBI_clq4OhW0Y3i5A/exec'; // שנה לכתובת שלך
-
-  reviewForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const formData = new FormData(reviewForm);
-
-    fetch(reviewScriptURL, {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.text())
-    .then(text => {
-      if (text.trim().toLowerCase().includes("ok")) {
-        reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
-        reviewMsg.style.color = "#00ffae";
-        reviewForm.reset();
-      } else {
-        reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
-        reviewMsg.style.color = "red";
+      function toggleContrast() {
+        document.body.classList.toggle('high-contrast');
       }
-    })
-    .catch(error => {
-      console.error("שגיאה:", error);
-      reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
-      reviewMsg.style.color = "red";
-    });
-  });
-  </script>
 
-  
- 
-<a href="https://wa.me/972507787100" class="whatsapp-fab" target="_blank" aria-label="שלח הודעה בוואטסאפ">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="white">
-    <path d="M19.11 17.27c-.29-.15-1.7-.84-1.96-.94s-.45-.14-.64.14-.74.93-.91 1.13-.34.21-.63.07-1.23-.45-2.35-1.44c-.87-.78-1.46-1.74-1.63-2.04s-.02-.45.12-.6c.13-.14.29-.36.44-.54s.2-.29.3-.48.05-.36-.02-.5-.64-1.54-.88-2.11c-.23-.56-.47-.48-.64-.49-.17 0-.36-.01-.56-.01s-.52.07-.79.36c-.27.29-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.21 5.08 4.5.71.3 1.27.48 1.7.61.71.23 1.36.2 1.87.12.57-.08 1.7-.7 1.94-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.35M16 3a13 13 0 0 1 11.19 19.63l1.61 5.9-6.08-1.6a13 13 0 1 1-6.72-23.93zm0 2.6a10.4 10.4 0 1 0 3.64 20.13l.54.15 3.56.93-.93-3.44-.15-.54A10.4 10.4 0 0 0 16 5.6z" />
-  </svg>
-</a>
+      function resetAccessibility() {
+        document.body.style.fontSize = '';
+        document.body.classList.remove('high-contrast');
+      }
+    </script>
 
-<div class="accessibility-wrapper">
-  <button id="accessibility-toggle" class="accessibility-button" aria-label="תפריט נגישות">
-    ♿
-  </button>
-  <div class="accessibility-menu" id="accessibility-menu">
-    <button onclick="increaseFont()">הגדלת טקסט</button>
-    <button onclick="toggleContrast()">ניגודיות גבוהה</button>
-    <button onclick="resetAccessibility()">איפוס</button>
-  </div>
-</div>
-<script>
-  const accBtn = document.getElementById('accessibility-btn');
-  let zoom = 1;
+    <!-- סליידר תמונות -->
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelectorAll('.slider-image');
 
-  accBtn.addEventListener('click', () => {
-    zoom += 0.1;
-    if (zoom > 1.5) zoom = 1;
-    document.body.style.zoom = zoom;
-  });
-</script>
-<script>
-  const toggleBtn = document.getElementById('accessibility-toggle');
-  const menu = document.getElementById('accessibility-menu');
+      function showNextSlide() {
+        slides[slideIndex].classList.remove('active');
+        slideIndex = (slideIndex + 1) % slides.length;
+        slides[slideIndex].classList.add('active');
+      }
 
-  toggleBtn.addEventListener('click', () => {
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-  });
-
-  function increaseFont() {
-    document.body.style.fontSize = 'larger';
-  }
-
-  function toggleContrast() {
-    document.body.classList.toggle('high-contrast');
-  }
-
-  function resetAccessibility() {
-    document.body.style.fontSize = '';
-    document.body.classList.remove('high-contrast');
-  }
-</script>
-<script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll('.slider-image');
-
-  function showNextSlide() {
-    slides[slideIndex].classList.remove('active');
-    slideIndex = (slideIndex + 1) % slides.length;
-    slides[slideIndex].classList.add('active');
-  }
-
-  setInterval(showNextSlide, 4000); // כל 4 שניות
-</script>
-</body>
+      setInterval(showNextSlide, 4000);
+    </script>
+  </body>
 </html>

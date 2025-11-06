@@ -1,552 +1,712 @@
+/* ===== בסיס כללי ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Heebo', sans-serif;
-    direction: rtl;
-    background: #f4f4f4;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
+  direction: rtl;
+  background: radial-gradient(circle at top, #020617 0%, #020617 55%, #000 100%);
+  color: #e5e7eb;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.75rem;
+  font-weight: 800;
+  color: #f9fafb;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p, li {
+  font-size: 1rem;
+}
+
+/* ===== ניווט עליון ===== */
+.navbar {
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo img {
+  height: 64px;
+  object-fit: contain;
+}
+
+.menu-toggle {
+  font-size: 1.6rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.call-button {
+  background: linear-gradient(135deg, #0ea5e9, #0369a1);
+  color: #ffffff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.8);
+  white-space: nowrap;
+}
+
+/* תפריט צד */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #020617;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  padding: 2rem 1.5rem;
+  list-style: none;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  gap: 1rem;
+  opacity: 0;
+}
+
+.nav-links.active {
+  transform: translateX(0);
+  opacity: 1;
+  display: flex;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links li a:hover {
+  color: #38bdf8;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.7);
+  z-index: 999;
+}
+
+.mobile-overlay.active {
+  display: block;
+}
+
+/* דרופדאון */
+.has-dropdown {
+  position: relative;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-right: 4px;
+}
+
+.has-dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #020617;
+  padding: 0.5rem 0;
+  list-style: none;
+  margin-top: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+  min-width: 220px;
+  z-index: 1001;
+}
+
+.has-dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 0.45rem 1rem;
+  display: block;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(30, 64, 175, 0.7);
+}
+
+/* ===== הירו – מעמדי עץ ===== */
+.stand-hero {
+  padding: 80px 16px 60px;
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 55%, #000 100%);
+}
+
+.stand-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* סליידר תמונות */
+.gallery-slider {
+  flex: 1 1 320px;
+  max-width: 480px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  aspect-ratio: 4 / 3;
+  background: #000;
+}
+
+.slider-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.slider-image.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* קופסת טקסט */
+.hero-text-box {
+  flex: 1 1 320px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(8, 47, 73, 0.96));
+  border-radius: 24px;
+  padding: 26px 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+  text-align: right;
+}
+
+.hero-main-title {
+  font-size: 2.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #7bdcff;
+  margin-bottom: 0.8rem;
+}
+
+.hero-body {
+  margin-bottom: 0.8rem;
+}
+
+.hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.9rem;
+}
+
+.hero-bullets li {
+  position: relative;
+  padding-right: 1.3rem;
+  margin-bottom: 0.35rem;
+}
+
+.hero-bullets li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #22c55e;
+}
+
+.hero-note {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+/* כפתור */
+.cta-button {
+  display: inline-block;
+  margin-top: 0.3rem;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  transform: translateY(-1px);
+}
+
+/* קו מפריד */
+.divider-line {
+  height: 3px;
+  background: linear-gradient(to left, #0ea5e9, #22c55e);
+  width: 100%;
+}
+
+/* ===== סקשן מידע ===== */
+.stand-info-section {
+  background: #020617;
+  padding: 70px 16px;
+}
+
+.stand-info-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 22px;
+  padding: 32px 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+.stand-info-inner p {
+  margin-bottom: 0.8rem;
+}
+
+/* ===== חבילות מעמדי עץ ===== */
+.stand-offers-section {
+  background: radial-gradient(circle at top, #020617 0%, #020617 60%, #000 100%);
+  padding: 70px 16px;
+}
+
+.stand-offers-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 22px;
+  padding: 32px 24px;
+  text-align: right;
+}
+
+.offers-intro {
+  margin-bottom: 1.2rem;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.offer-card {
+  background: rgba(15, 23, 42, 0.98);
+  border-radius: 18px;
+  padding: 18px 16px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.offer-card.highlight {
+  border: 1px solid #22c55e;
+}
+
+.offer-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.offer-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.6rem;
+}
+
+.offer-card li {
+  position: relative;
+  padding-right: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.offer-card li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #38bdf8;
+}
+
+.offer-note {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.offer-card-price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #22c55e;
+  margin-bottom: 0.15rem;
+}
+
+.offer-card-tag {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  margin-bottom: 0.6rem;
+}
+
+.offers-footnote {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+  margin-top: 1.2rem;
+}
+
+.offers-cta {
+  margin-top: 1.3rem;
+}
+
+/* ===== מדיה – וידאו ותמונות ===== */
+.stand-media-section {
+  background: #020617;
+  padding: 70px 16px;
+}
+
+.stand-media-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.media-intro {
+  margin-bottom: 1.2rem;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto 20px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+  background-color: #000;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  border: none;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+.stand-thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.stand-thumbs img,
+.stand-thumbs video {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== טופס ביקורת ===== */
+.review-form-section {
+  background: radial-gradient(circle at top, #020617 0%, #020617 60%, #000 100%);
+  padding: 70px 16px;
+  text-align: center;
+}
+
+.review-form-title {
+  margin-bottom: 0.5rem;
+}
+
+.review-intro {
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+  color: #e5e7eb;
+}
+
+.review-form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-form input,
+.review-form textarea {
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  border: none;
+  background: #ffffff;
+  color: #111827;
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.review-form button {
+  margin-top: 4px;
+}
+
+/* ===== פוטר ===== */
+.custom-footer {
+  background-color: #020617;
+  color: #f9fafb;
+  text-align: center;
+  padding: 40px 16px 20px;
+  border-top: 2px solid #1e293b;
+}
+
+.footer-content {
+  max-width: 700px;
+  margin: 0 auto 16px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-social-text {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.social-icons {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.6);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.social-circle.wa {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.social-circle.ig {
+  background: radial-gradient(circle at 30% 30%, #fdf497 0, #fd5949 40%, #d6249f 70%, #285AEB 100%);
+}
+
+.social-circle.fb {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.social-circle:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.8);
+  opacity: 0.95;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1f2933;
+  padding-top: 10px;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ===== וואטסאפ צף ===== */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(to bottom right, #25D366, #128C7E);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== נגישות ===== */
+.accessibility-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.accessibility-button {
+  background: linear-gradient(to right, #0ea5e9, #6366f1);
+  color: #ffffff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.accessibility-menu {
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  padding: 8px;
+  margin-bottom: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.accessibility-menu button {
+  background: #0ea5e9;
+  color: #ffffff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.accessibility-menu button:hover {
+  background: #0369a1;
+}
+
+/* מצב ניגודיות גבוהה */
+body.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* ===== רספונסיביות ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
   }
-  .navbar {
-    background: #111;
-    border-bottom: 3px solid #0090bf;
-    padding: 0.5rem 1rem;
+
+  h2 {
+    font-size: 1.6rem;
   }
+
+  .stand-hero-inner {
+    flex-direction: column;
+  }
+
+  .gallery-slider {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 16px;
+  }
+
+  .hero-text-box,
+  .stand-info-inner,
+  .stand-offers-inner,
+  .stand-media-inner {
+    padding: 22px 18px;
+  }
+
   .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 60px;
+    gap: 12px;
   }
-  .menu-toggle {
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-  }
-  .logo img {
-    height: 70px;
-    object-fit: contain;
-  }
+
   .call-button {
-    background-color: #0090bf;
-    color: black;
-    padding: 0.4rem 0.8rem;
-    border-radius: 2rem;
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    white-space: nowrap;
+    font-size: 0.8rem;
   }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #111;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 260px;
-    height: 100vh;
-    padding: 2rem 1.5rem;
-    list-style: none;
-    z-index: 1000;
-    transform: translateX(100%);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    gap: 1.2rem;
-    opacity: 0;
+
+  .video-wrapper {
+    max-width: 360px;
   }
-  .nav-links.active {
-    transform: translateX(0);
-    opacity: 1;
-    display: flex;
+
+  .stand-thumbs img,
+  .stand-thumbs video {
+    height: 100px;
   }
-  .nav-links li {
-    font-size: 1.1rem;
-  }
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-  }
-  .nav-links a:hover {
-    color: #ffd33d;
-  }
-  .close-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    align-self: flex-end;
-    cursor: pointer;
-    margin-bottom: 1rem;
-  }
-  .mobile-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 999;
-  }
-  .mobile-overlay.active {
-    display: block;
-  }
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #222;
-    padding: 0;
-    list-style: none;
-    margin-top: 0.5rem;
-  }
-  .has-dropdown.open .dropdown-menu {
-    display: block;
-  }
-  .has-dropdown {
-    position: relative;
-  }
-  .dropdown-menu li a {
-    padding: 0.5rem 1rem;
-    display: block;
-    color: white;
-    text-decoration: none;
-  }
-  .dropdown-menu li a:hover {
-    background-color: #333;
-  }
-  .arrow {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    margin-right: 4px;
-  }
-  .has-dropdown.open .arrow {
-    transform: rotate(180deg);
-  }
-  .gallery {
-    text-align: center;
-    padding: 60px 20px;
-    background: #0a0e1b;
-    color: #fff;
-  }
-  
-  .gallery h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #00d1ff;
-  }
-  
-  .carousel {
-    overflow: hidden;
-    max-width: 90%;
-    margin: auto;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  }
-  
-  .slides {
-    display: flex;
-    animation: slide 12s infinite;
-  }
-  
-  .slides img {
-    width: 100%;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  
-  @keyframes slide {
-    0%   { transform: translateX(0); }
-    33%  { transform: translateX(-100%); }
-    66%  { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
-  }
-  .site-footer {
-    background-color: #111;
-    color: #bbb;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    border-top: 2px solid #00d1ff;
-  }
-  
-  .site-footer .social-icons a {
-    color: #00d1ff;
-    font-size: 1.4rem;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .site-footer .social-icons a:hover {
-    color: #ff5f5f;
-  }
-  /* עיצוב מחדש לחוויית משתמש ברמה גבוהה */
-  
-  body {
-    font-family: 'Heebo', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #222;
-    line-height: 1.7;
-  }
-  
- 
-  .whatsapp-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 28px;
-    background: linear-gradient(to right, #00d1ff, #00b2e3);
-    color: #111;
-    font-weight: bold;
-    font-size: 1.05rem;
-    border: none;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  .whatsapp-btn:hover {
-    background: linear-gradient(to right, #0090bf, #007bb8);
-    color: white;
-    transform: scale(1.03);
-  }
-  .whatsapp-fixed:hover {
-    transform: scale(1.1);
-  }
-  
-  .whatsapp-fixed img {
-    width: 30px;
-    height: 30px;
-  }
-  .whatsapp-fab {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(to bottom right, #25D366, #128C7E);
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    cursor: pointer;
-    animation: popIn 0.8s ease-out;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .whatsapp-fab:hover {
-    transform: scale(1.15) rotate(5deg);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  }
-  @keyframes popIn {
-    0% {
-      transform: scale(0) rotate(-45deg);
-      opacity: 0;
-    }
-    60% {
-      transform: scale(1.1) rotate(15deg);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1) rotate(0deg);
-    }
-  }
-  .custom-footer {
-    background-color: #0a0e1b;
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px 20px;
-    border-top: 4px solid #00d1ff;
-  }
-  
-  .custom-footer .footer-title {
-    font-size: 1.6rem;
-    color: #00d1ff;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-  }
-  
-  .custom-footer p {
-    font-size: 1rem;
-    color: #ccc;
-    max-width: 600px;
-    margin: 0 auto 20px;
-    line-height: 1.8;
-  }
-  
-  .custom-footer .social-icons {
-    margin: 20px 0;
-  }
-  
-  .custom-footer .social-icons a {
-    font-size: 1.6rem;
-    margin: 0 15px;
-    color: #00d1ff;
-    transition: color 0.3s;
-    text-decoration: none;
-  }
-  
-  .custom-footer .social-icons a:hover {
-    color: #ff5f5f;
-  }
-  
-  .footer-bottom {
-    border-top: 1px solid #333;
-    padding-top: 15px;
-    font-size: 0.9rem;
-    color: #aaa;
-  }
-  .review-form-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.8)),
-                url("/jeem.jpg") center/cover no-repeat;
-    padding: 80px 20px;
-    text-align: center;
-    color: #fff;
-    background-attachment: fixed;
-    border-top: 3px solid #00d1ff;
-  }
-  
-  .review-form-title {
-    font-size: 2rem;
-    color: #00d1ff;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-  }
-  
-  .review-form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .review-form input,
-  .review-form textarea {
-    padding: 14px 18px;
-    font-size: 1rem;
-    border-radius: 14px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #111;
-    outline: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    direction: rtl;
-  }
-  
-  .review-form textarea {
-    resize: none;
-    min-height: 120px;
-  }
-  
-  .review-form button {
-    background: linear-gradient(to right, #00d1ff, #00b2e3);
-    color: #111;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 14px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-  }
-  
-  .review-form button:hover {
-    background: linear-gradient(to right, #0090bf, #007bb8);
-    color: white;
-  }
-  .stand-hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
-                url("/jeem.jpg") center/cover no-repeat;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 20px;
-    background-attachment: fixed;
-    text-align: right;
-  }
-  
-  /* תוכן */
-  .hero-overlay-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1000px;
-    margin: auto;
-    gap: 40px;
-    padding: 20px;
-  }
-  
-  .hero-text-box.right-align {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 30px;
-    border-radius: 16px;
-    color: white;
-    max-width: 800px;
-  }
-  
-  .hero-text-box h2 {
-    font-size: 2rem;
-    color: #00d1ff;
-    margin-bottom: 15px;
-  }
-  
-  .hero-text-box p {
-    font-size: 1.2rem;
-    line-height: 1.9;
-    color: #f0f0f0;
-  }
-  
-  .gallery-preview {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .gallery-preview img {
-    width: 100%;
-    max-width: 320px;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  
-  .gallery-preview img:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  
-  .gallery-preview img:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  
-  @keyframes fadeInUp {
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  .accessibility-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
-    font-size: 24px;
-    padding: 10px 14px;
-    background: #00d1ff;
-    border: none;
-    border-radius: 50%;
-    color: #111;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  }
-  .accessibility-button {
-    position: fixed;
-    bottom: 20px; /* מעל הוואטסאפ */
-    left: 20px;
-    background: linear-gradient(to left, #00c6ff, #0072ff);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border: none;
-    cursor: pointer;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.2s ease;
-  }
-  
-  .accessibility-button:hover {
-    transform: scale(1.1) rotate(5deg);
-  }
+
   .accessibility-wrapper {
-    position: fixed;
-    bottom: 20px; /* היה 95px */
-    left: 20px;
-    z-index: 999;
+    bottom: 80px;
   }
-  
-  .accessibility-button {
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-    color: white;
-    width: 60px;
-    height: 60px;
-    font-size: 26px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease;
-  }
-  
-  .accessibility-button:hover {
-    transform: scale(1.1) rotate(5deg);
-  }
-  
-  .accessibility-menu {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-    padding: 10px;
-    margin-bottom: 10px;
-    display: none;
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
-  
-  .accessibility-menu button {
-    background: #00c6ff;
-    color: #111;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
-  .accessibility-menu button:hover {
-    background: #0072ff;
-    color: white;
-  }
-  
-  body.high-contrast {
-    background-color: #000 !important;
-    color: #fff !important;
-  }
-  
-  body.high-contrast a,
-  body.high-contrast h1,
-  body.high-contrast h2,
-  body.high-contrast h3,
-  body.high-contrast h4,
-  body.high-contrast h5,
-  body.high-contrast h6 {
-    color: #00ffff !important;
-  }
-  
-  @media (max-width: 768px) {
-    .accessibility-wrapper {
-      bottom: 90px;
-      right: 15px;
-    }
-    .accessibility-menu button {
-      font-size: 13px;
-      padding: 6px 10px;
-    }
-  }
+}

@@ -1,0 +1,532 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Heebo', sans-serif;
+    direction: rtl;
+    background: radial-gradient(circle at top, #020617 0%, #020617 60%, #000 100%);
+    color: #f9fafb;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3 {
+    margin: 0 0 0.75rem;
+    font-weight: 800;
+    color: #e0faff;
+  }
+  
+  p, li {
+    font-size: 1rem;
+  }
+  
+  /* ניווט */
+  .navbar {
+    background: #020617;
+    border-bottom: 1px solid #1e293b;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .navbar-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  
+  .logo img {
+    height: 64px;
+    object-fit: contain;
+  }
+  
+  .menu-toggle {
+    font-size: 1.6rem;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .call-button {
+    background: linear-gradient(135deg, #0ea5e9, #0369a1);
+    color: #ffffff;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.8);
+    white-space: nowrap;
+  }
+  
+  /* תפריט צד */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #020617;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 2rem 1.5rem;
+    list-style: none;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    gap: 1rem;
+    opacity: 0;
+  }
+  
+  .nav-links.active {
+    transform: translateX(0);
+    opacity: 1;
+    display: flex;
+  }
+  
+  .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav-links li a:hover {
+    color: #38bdf8;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 23, 42, 0.7);
+    z-index: 999;
+  }
+  
+  .mobile-overlay.active {
+    display: block;
+  }
+  
+  /* דרופדאון */
+  .has-dropdown {
+    position: relative;
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-right: 4px;
+  }
+  
+  .has-dropdown.open .arrow {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #020617;
+    padding: 0.5rem 0;
+    list-style: none;
+    margin-top: 0.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+    min-width: 220px;
+    z-index: 1001;
+  }
+  
+  .has-dropdown.open .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li a {
+    padding: 0.45rem 1rem;
+    display: block;
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: rgba(30, 64, 175, 0.7);
+  }
+  
+  /* HERO חבילות */
+  .packages-hero {
+    padding: 80px 16px 60px;
+  }
+  
+  .packages-hero-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .packages-hero-text {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(8, 47, 73, 0.96));
+    border-radius: 24px;
+    padding: 26px 24px 30px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    text-align: right;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    color: #7bdcff;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-body {
+    margin-bottom: 0.75rem;
+    font-size: 0.98rem;
+  }
+  
+  .hero-bullets {
+    margin-bottom: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .hero-bullets li {
+    position: relative;
+    padding-right: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .hero-bullets li::before {
+    content: "•";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #22c55e;
+  }
+  
+  .hero-note {
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    color: #e5e7eb;
+  }
+  
+  /* כפתור */
+  .cta-button {
+    display: inline-block;
+    margin-top: 0.3rem;
+    padding: 10px 24px;
+    border-radius: 999px;
+    border: none;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+    transition: background 0.25s ease, transform 0.15s ease;
+  }
+  
+  .cta-button:hover {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    transform: translateY(-1px);
+  }
+  
+  .big-cta {
+    margin-top: 1.2rem;
+  }
+  
+  /* מפריד */
+  .divider-line {
+    height: 3px;
+    background: linear-gradient(to left, #0ea5e9, #22c55e);
+    width: 100%;
+  }
+  
+  /* סקשני חבילות לפי סוג אירוע */
+  .event-packages-section {
+    padding: 70px 16px;
+  }
+  
+  .event-packages-section.alt-bg {
+    background: radial-gradient(circle at top, #020617 0%, #020617 60%, #000 100%);
+  }
+  
+  .event-packages-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(15, 23, 42, 0.96);
+    border-radius: 22px;
+    padding: 32px 24px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    text-align: right;
+  }
+  
+  .section-intro {
+    margin-bottom: 1.2rem;
+  }
+  
+  .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .package-card {
+    background: rgba(15, 23, 42, 0.98);
+    border-radius: 18px;
+    padding: 18px 16px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    position: relative;
+  }
+  
+  .package-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .package-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.6rem;
+  }
+  
+  .package-card li {
+    position: relative;
+    padding-right: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .package-card li::before {
+    content: "•";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #38bdf8;
+  }
+  
+  .package-for {
+    font-size: 0.9rem;
+    color: #cbd5f5;
+    margin-top: 0.4rem;
+  }
+  
+  .package-card.highlight {
+    border: 1px solid #22c55e;
+  }
+  
+  /* תגיות */
+  .tag {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    background: linear-gradient(135deg, #0ea5e9, #6366f1);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  
+  .tag.hot {
+    background: linear-gradient(135deg, #f97316, #ec4899);
+  }
+  
+  .tag.gold {
+    background: linear-gradient(135deg, #eab308, #f97316);
+  }
+  
+  /* סקשן סיכום */
+  .cta-summary-section {
+    padding: 70px 16px 80px;
+  }
+  
+  .cta-summary-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(15, 23, 42, 0.96);
+    border-radius: 22px;
+    padding: 32px 24px;
+    text-align: right;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* פוטר */
+  .custom-footer {
+    background-color: #020617;
+    color: #f9fafb;
+    text-align: center;
+    padding: 40px 16px 20px;
+    border-top: 2px solid #1e293b;
+  }
+  
+  .footer-content {
+    max-width: 700px;
+    margin: 0 auto 16px;
+  }
+  
+  .footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-social-text {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #cbd5f5;
+  }
+  
+  .social-icons {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .social-icons a {
+    font-size: 1.6rem;
+    margin: 0 10px;
+    color: #00d1ff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ff5f5f;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #1f2933;
+    padding-top: 10px;
+    font-size: 0.85rem;
+    color: #9ca3af;
+  }
+  
+  /* וואטסאפ צף */
+  .whatsapp-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(to bottom right, #25D366, #128C7E);
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .whatsapp-fab:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* נגישות */
+  .accessibility-wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+  }
+  
+  .accessibility-button {
+    background: linear-gradient(to right, #0ea5e9, #6366f1);
+    color: #ffffff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+  }
+  
+  .accessibility-menu {
+    background-color: #ffffff;
+    color: #111827;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    padding: 8px;
+    margin-bottom: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+  
+  .accessibility-menu button {
+    background: #0ea5e9;
+    color: #ffffff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .accessibility-menu button:hover {
+    background: #0369a1;
+  }
+  
+  /* מצב ניגודיות גבוהה */
+  body.high-contrast {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+  
+  /* רספונסיביות */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.7rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    .navbar-container {
+      gap: 12px;
+    }
+  
+    .call-button {
+      font-size: 0.8rem;
+    }
+  
+    .event-packages-inner,
+    .cta-summary-inner,
+    .packages-hero-text {
+      padding: 22px 18px;
+    }
+  
+    .packages-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .accessibility-wrapper {
+      bottom: 80px;
+    }
+  }

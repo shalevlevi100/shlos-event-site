@@ -1,689 +1,631 @@
+/* ===== בסיס כללי ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Heebo', sans-serif;
-    direction: rtl;
-    background: #f4f4f4;
-    color: #333;
-  }
-  .navbar {
-    background: #111;
-    border-bottom: 3px solid #0090bf;
-    padding: 0.5rem 1rem;
-  }
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 60px;
-  }
-  .menu-toggle {
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-  }
-  .logo img {
-    height: 70px;
-    object-fit: contain;
-  }
-  .call-button {
-    background-color: #0090bf;
-    color: black;
-    padding: 0.4rem 0.8rem;
-    border-radius: 2rem;
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    white-space: nowrap;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #111;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 260px;
-    height: 100vh;
-    padding: 2rem 1.5rem;
-    list-style: none;
-    z-index: 1000;
-    transform: translateX(100%);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    gap: 1.2rem;
-    opacity: 0;
-  }
-  .nav-links.active {
-    transform: translateX(0);
-    opacity: 1;
-    display: flex;
-  }
-  .nav-links li {
-    font-size: 1.1rem;
-  }
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-  }
-  .nav-links a:hover {
-    color: #ffd33d;
-  }
-  .close-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    align-self: flex-end;
-    cursor: pointer;
-    margin-bottom: 1rem;
-  }
-  .mobile-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 999;
-  }
-  .mobile-overlay.active {
-    display: block;
-  }
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #222;
-    padding: 0;
-    list-style: none;
-    margin-top: 0.5rem;
-  }
-  .has-dropdown.open .dropdown-menu {
-    display: block;
-  }
-  .has-dropdown {
-    position: relative;
-  }
-  .dropdown-menu li a {
-    padding: 0.5rem 1rem;
-    display: block;
-    color: white;
-    text-decoration: none;
-  }
-  .dropdown-menu li a:hover {
-    background-color: #333;
-  }
-  .arrow {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    margin-right: 4px;
-  }
-  .has-dropdown.open .arrow {
-    transform: rotate(180deg);
-  }
-  .gallery {
-    text-align: center;
-    padding: 60px 20px;
-    background: #0a0e1b;
-    color: #fff;
-  }
-  
-  .gallery h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #00d1ff;
-  }
-  
-  .carousel {
-    overflow: hidden;
-    max-width: 90%;
-    margin: auto;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  }
-  
-  .slides {
-    display: flex;
-    animation: slide 12s infinite;
-  }
-  
-  .slides img {
-    width: 100%;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  
-  @keyframes slide {
-    0%   { transform: translateX(0); }
-    33%  { transform: translateX(-100%); }
-    66%  { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
-  }
-  .site-footer {
-    background-color: #111;
-    color: #bbb;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    border-top: 2px solid #00d1ff;
-  }
-  
-  .site-footer .social-icons a {
-    color: #00d1ff;
-    font-size: 1.4rem;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .site-footer .social-icons a:hover {
-    color: #ff5f5f;
-  }
-  /* עיצוב מחדש לחוויית משתמש ברמה גבוהה */
-  
-  body {
-    font-family: 'Heebo', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #222;
-    line-height: 1.7;
-  }
-  
- 
-  .whatsapp-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 28px;
-    background: linear-gradient(to right, #00d1ff, #00b2e3);
-    color: #111;
-    font-weight: bold;
-    font-size: 1.05rem;
-    border: none;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  .whatsapp-btn:hover {
-    background: linear-gradient(to right, #0090bf, #007bb8);
-    color: white;
-    transform: scale(1.03);
-  }
-  .whatsapp-fixed:hover {
-    transform: scale(1.1);
-  }
-  
-  .whatsapp-fixed img {
-    width: 30px;
-    height: 30px;
-  }
-  .whatsapp-fab {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(to bottom right, #25D366, #128C7E);
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    cursor: pointer;
-    animation: popIn 0.8s ease-out;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .whatsapp-fab:hover {
-    transform: scale(1.15) rotate(5deg);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  }
-  @keyframes popIn {
-    0% {
-      transform: scale(0) rotate(-45deg);
-      opacity: 0;
-    }
-    60% {
-      transform: scale(1.1) rotate(15deg);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1) rotate(0deg);
-    }
-  }
-  .custom-footer {
-    background-color: #0a0e1b;
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px 20px;
-    border-top: 4px solid #00d1ff;
-  }
-  
-  .custom-footer .footer-title {
-    font-size: 1.6rem;
-    color: #00d1ff;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-  }
-  
-  .custom-footer p {
-    font-size: 1rem;
-    color: #ccc;
-    max-width: 600px;
-    margin: 0 auto 20px;
-    line-height: 1.8;
-  }
-  
-  .custom-footer .social-icons {
-    margin: 20px 0;
-  }
-  
-  .custom-footer .social-icons a {
-    font-size: 1.6rem;
-    margin: 0 15px;
-    color: #00d1ff;
-    transition: color 0.3s;
-    text-decoration: none;
-  }
-  
-  .custom-footer .social-icons a:hover {
-    color: #ff5f5f;
-  }
-  
-  .footer-bottom {
-    border-top: 1px solid #333;
-    padding-top: 15px;
-    font-size: 0.9rem;
-    color: #aaa;
-    background-color: black;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
+  direction: rtl;
+  background: radial-gradient(circle at top, #020617 0%, #020617 55%, #000 100%);
+  color: #e5e7eb;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.75rem;
+  font-weight: 800;
+  color: #f9fafb;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.25rem; }
+
+p, li {
+  font-size: 1rem;
+}
+
+/* ===== ניווט עליון (תואם לכל האתר) ===== */
+.navbar {
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo img {
+  height: 64px;
+  object-fit: contain;
+}
+
+.menu-toggle {
+  font-size: 1.6rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.call-button {
+  background: linear-gradient(135deg, #0ea5e9, #0369a1);
+  color: #ffffff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.8);
+  white-space: nowrap;
+}
+
+/* תפריט צד במובייל */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #020617;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  padding: 2rem 1.5rem;
+  list-style: none;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  gap: 1.1rem;
+  opacity: 0;
+}
+
+/* כל הלינקים בתפריט בכחול מודגש */
+.nav-links li a {
+  color: #35c2ff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: #7de3ff;
+}
+
+.nav-links.active {
+  transform: translateX(0);
+  opacity: 1;
+  display: flex;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.7);
+  z-index: 999;
+}
+
+.mobile-overlay.active {
+  display: block;
+}
+
+/* דרופדאון שירותים */
+.has-dropdown {
+  position: relative;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-right: 4px;
+}
+
+.has-dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #020617;
+  padding: 0.5rem 0;
+  list-style: none;
+  margin-top: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+  min-width: 220px;
+  z-index: 1001;
+}
+
+.has-dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 0.45rem 1rem;
+  display: block;
+  color: #35c2ff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(30, 64, 175, 0.7);
+}
+
+/* ===== הירו גלריה ===== */
+.gallery-hero {
+  padding: 80px 16px 60px;
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 60%, #000 100%);
+}
+
+.gallery-hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-hero-text {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(8, 47, 73, 0.96));
+  border-radius: 24px;
+  padding: 28px 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+  text-align: right;
+}
+
+.gallery-hero-subtitle {
+  font-size: 1rem;
+  color: #7bdcff;
+  margin-bottom: 0.8rem;
+}
+
+.gallery-hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.9rem;
+}
+
+.gallery-hero-bullets li {
+  position: relative;
+  padding-right: 1.3rem;
+  margin-bottom: 0.35rem;
+}
+
+.gallery-hero-bullets li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #22c55e;
+}
+
+.gallery-hero-note {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+/* כפתור קריאה לפעולה */
+.cta-button {
+  display: inline-block;
+  margin-top: 0.3rem;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  transform: translateY(-1px);
+}
+
+/* קו מפריד */
+.divider-line {
+  height: 3px;
+  background: linear-gradient(to left, #0ea5e9, #22c55e);
+  width: 100%;
+}
+
+/* ===== גלריה ===== */
+.gallery-section {
+  padding: 70px 16px 80px;
+  background: #020617;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  color: #00d1ff;
+  margin-bottom: 8px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.gallery-subtitle {
+  font-size: 1rem;
+  color: #cbd5f5;
+  margin-bottom: 26px;
+}
+
+/* טאבים */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 9px 22px;
+  background: transparent;
+  color: #e5e7eb;
+  border-radius: 999px;
+  border: 2px solid #0ea5e9;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.1s ease;
+}
+
+.tab-button.active {
+  background: #0ea5e9;
+  color: #020617;
+  transform: translateY(-1px);
+}
+
+.tab-button:hover {
+  background: rgba(14,165,233,0.15);
+}
+
+/* גריד מדיה */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.media-item {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.7);
+  cursor: pointer;
+  background: #020617;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.media-item:hover img,
+.media-item:hover video {
+  transform: scale(1.06);
+}
+
+/* שכבת טקסט על המדיה */
+.media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15,23,42,0.95), rgba(15,23,42,0.05));
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px 12px 14px;
+  transition: opacity 0.35s ease;
+}
+
+.media-overlay span {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.media-item:hover .media-overlay {
+  opacity: 1;
+}
+
+/* טאב תוכן */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.35s ease forwards;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== לייטבוקס ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.lightbox img,
+.lightbox video {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+/* ===== טופס ביקורת ===== */
+.review-form-section {
+  background: radial-gradient(circle at top, #020617 0%, #020617 60%, #000 100%);
+  padding: 70px 16px;
+  text-align: center;
+}
+
+.review-form-title {
+  margin-bottom: 0.5rem;
+}
+
+.review-intro {
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+  color: #e5e7eb;
+}
+
+.review-form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-form input,
+.review-form textarea {
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  border: none;
+  background: #ffffff;
+  color: #111827;
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.review-form button {
+  margin-top: 4px;
+}
+
+/* ===== פוטר ===== */
+.custom-footer {
+  background-color: #020617;
+  color: #f9fafb;
+  text-align: center;
+  padding: 40px 16px 20px;
+  border-top: 2px solid #1e293b;
+}
+
+.footer-content {
+  max-width: 700px;
+  margin: 0 auto 16px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-social-text {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.social-icons {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* עיגולים לרשתות */
+.social-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.6);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.social-circle.wa {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.social-circle.ig {
+  background: radial-gradient(circle at 30% 30%, #fdf497 0, #fd5949 40%, #d6249f 70%, #285AEB 100%);
+}
+
+.social-circle.fb {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.social-circle:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.8);
+  opacity: 0.95;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1f2933;
+  padding-top: 10px;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ===== וואטסאפ צף ===== */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(to bottom right, #25D366, #128C7E);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== נגישות ===== */
+.accessibility-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.accessibility-button {
+  background: linear-gradient(to right, #0ea5e9, #6366f1);
+  color: #ffffff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.accessibility-menu {
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  padding: 8px;
+  margin-bottom: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.accessibility-menu button {
+  background: #0ea5e9;
+  color: #ffffff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.accessibility-menu button:hover {
+  background: #0369a1;
+}
+
+/* מצב ניגודיות גבוהה */
+body.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* ===== רספונסיביות ===== */
+@media (max-width: 768px) {
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.5rem; }
+
+  .gallery-hero-text,
+  .gallery-section,
   .review-form-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.8)),
-                url("/jeem.jpg") center/cover no-repeat;
-    padding: 80px 20px;
-    text-align: center;
-    color: #fff;
-    background-attachment: fixed;
-    border-top: 3px solid #00d1ff;
+    padding: 22px 18px;
   }
-  
-  .review-form-title {
-    font-size: 2rem;
-    color: #00d1ff;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-  }
-  
-  .review-form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .review-form input,
-  .review-form textarea {
-    padding: 14px 18px;
-    font-size: 1rem;
-    border-radius: 14px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #111;
-    outline: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    direction: rtl;
-  }
-  
-  .review-form textarea {
-    resize: none;
-    min-height: 120px;
-  }
-  
-  .review-form button {
-    background: linear-gradient(to right, #00d1ff, #00b2e3);
-    color: #111;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 14px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-  }
-  
-  .review-form button:hover {
-    background: linear-gradient(to right, #0090bf, #007bb8);
-    color: white;
-  }
-  .stand-hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
-                url("jeem.jpg") center/cover no-repeat;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 20px;
-    background-attachment: fixed;
-    text-align: right;
-  }
-  
-  /* תוכן */
-  .hero-overlay-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1000px;
-    margin: auto;
-    gap: 40px;
-    padding: 20px;
-  }
-  
-  .hero-text-box.right-align {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 30px;
-    border-radius: 16px;
-    color: white;
-    max-width: 800px;
-  }
-  
-  .hero-text-box h2 {
-    font-size: 2rem;
-    color: #00d1ff;
-    margin-bottom: 15px;
-  }
-  
-  .hero-text-box p {
-    font-size: 1.2rem;
-    line-height: 1.9;
-    color: #f0f0f0;
-  }
-  
-  .gallery-preview {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .gallery-preview img {
-    width: 100%;
-    max-width: 320px;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  
-  .gallery-preview img:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  
-  .gallery-preview img:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  
-  @keyframes fadeInUp {
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  .gallery-section {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-    url("/image/jeeme.jpg") center/cover no-repeat;
-    padding: 80px 20px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .gallery-container {
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .gallery-title {
-    font-size: 2.2rem;
-    color: #00d1ff;
-    margin-bottom: 40px;
-  }
-  
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-  }
-  
-  .gallery-item {
-    background: #111;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .gallery-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.5);
-  }
-  
-  .gallery-item img,
-  .gallery-item video {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .gallery-item video {
-    background: #000;
-  }
-  .gallery-section {
-    padding: 80px 20px;
-    background: #111;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .gallery-title {
-    font-size: 2.2rem;
-    color: #00d1ff;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-  }
-  
-  .media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .media-grid img,
-  .media-grid video {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
-  }
-  
-  .media-grid img:hover,
-  .media-grid video:hover {
-    transform: scale(1.03);
-  }
-  .tab-buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+
+  .navbar-container {
     gap: 12px;
   }
-  .tab-button {
-    padding: 12px 24px;
-    background: #111;
-    color: #fff;
-    border: 2px solid #00d1ff;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s, color 0.3s;
-  }
-  .tab-button.active {
-    background: #00d1ff;
-    color: #111;
-  }
-  .tab-content {
-    display: none;
-    animation: fadeIn 0.5s ease forwards;
-  }
-  .tab-content.active {
-    display: block;
-  }
-  .gallery-title.enhanced {
-    font-size: 2.6rem;
-    color: #00d1ff;
-    margin-bottom: 10px;
-    margin-top: -7%;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    animation: fadeInDown 0.8s ease-out;
+
+  .call-button {
+    font-size: 0.8rem;
   }
 
-  .gallery-subtitle {
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-bottom: 30px;
-    animation: fadeInUp 1s ease-out;
+  .media-grid {
+    gap: 14px;
   }
 
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .accessibility-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
-    font-size: 24px;
-    padding: 10px 14px;
-    background: #00d1ff;
-    border: none;
-    border-radius: 50%;
-    color: #111;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  }
-  .accessibility-button {
-    position: fixed;
-    bottom: 20px; /* מעל הוואטסאפ */
-    left: 20px;
-    background: linear-gradient(to left, #00c6ff, #0072ff);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border: none;
-    cursor: pointer;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.2s ease;
-  }
-  
-  .accessibility-button:hover {
-    transform: scale(1.1) rotate(5deg);
-  }
   .accessibility-wrapper {
-    position: fixed;
-    bottom: 20px; /* היה 95px */
-    left: 20px;
-    z-index: 999;
+    bottom: 80px;
   }
-  
-  .accessibility-button {
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-    color: white;
-    width: 60px;
-    height: 60px;
-    font-size: 26px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease;
-  }
-  
-  .accessibility-button:hover {
-    transform: scale(1.1) rotate(5deg);
-  }
-  
-  .accessibility-menu {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-    padding: 10px;
-    margin-bottom: 10px;
-    display: none;
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
-  
-  .accessibility-menu button {
-    background: #00c6ff;
-    color: #111;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
-  .accessibility-menu button:hover {
-    background: #0072ff;
-    color: white;
-  }
-  
-  body.high-contrast {
-    background-color: #000 !important;
-    color: #fff !important;
-  }
-  
-  body.high-contrast a,
-  body.high-contrast h1,
-  body.high-contrast h2,
-  body.high-contrast h3,
-  body.high-contrast h4,
-  body.high-contrast h5,
-  body.high-contrast h6 {
-    color: #00ffff !important;
-  }
-  
-  @media (max-width: 768px) {
-    .accessibility-wrapper {
-      bottom: 90px;
-      right: 15px;
-    }
-    .accessibility-menu button {
-      font-size: 13px;
-      padding: 6px 10px;
-    }
-  }
+}

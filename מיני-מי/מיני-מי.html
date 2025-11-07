@@ -1,263 +1,422 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head>
-      <meta charset="UTF-8">
-      <title>עמדת מיני מי לאירועים – Shlo’s Event Magnetic & Photo</title>
-      <meta name="description" content="עמדת מיני מי לאירועים של Shlo’s Event – חוויה ייחודית ומרגשת שהאורחים לא ישכחו. צילום במקום, דמות אישית על מגנט, מזכרת מקורית.">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17170570865"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <title>עמדת Mini Me לאירועים – SHLO'S EVENT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="עמדת Mini Me – מגנט חתוך בצורת אדם על מעמד עץ עם חריטה אישית. צילום על מסך לבן, עמודי תור וחצובה – אטרקציה מטורפת לאירועים. עד 300 מיני מי באירוע.">
 
-  gtag('config', 'AW-17170570865');
-</script>
-    </head>
-    <link rel="stylesheet" href="mini_me.css">
-    <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '23964898983166742');
-  fbq('track', 'PageView');
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17170570865"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17170570865');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=23964898983166742&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '23964898983166742');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=23964898983166742&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="mini_me.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-          <div class="menu-toggle" id="menu-toggle">☰</div>
-          <div class="logo">
-            <img src="/logo.png" alt="Shlo's Logo" />
-          </div>
-          <a href="tel:0507787100" class="call-button">📞 050-7787-100</a>
-        </div>
-        <div class="mobile-overlay" id="overlay"></div>
-        <ul class="nav-links" id="nav-links">
-          <button id="close-menu" class="close-button">✕</button>
-          <li><a href="/index.html">ראשי</a></li>
-          <li class="has-dropdown">
-            <a href="#" id="services-link">שירותים <span class="arrow">▾</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/מעמדי-עץ-מעוצבים/מעמדי-עץ.html">מעמדי עץ מעוצבים </a></li>
-              <li><a href="/מגנטים-לאירועים/מגנטים.html">מגנטים</a></li>
-              <li><a href="/עמדת-צילום-לאירועים/עמדת-צילום.html">עמדת צילום</a></li>
-              <li><a href="/מיני-מי/מיני-מי.html">Mini Me</a></li>
-              <li><a href="/בלוק-עץ-לאירועים/בלוק-עץ.html">בלוקי עץ לאירועים</a></li>
-            </ul>
-          </li>
-          <li><a href="/תמונות-סרטונים-מהאירוע-שלכם/תמונות-סרטונים.html">גלריה</a></li>
-          <li><a href="/שאלות-תשובות-שלכם/שאלות-שלכם.html">שאלות ותשובות</a></li>
-          <li><a href="/אודות/אודות.html">אודות</a></li>
+  <!-- ניווט -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="logo">
+        <img src="/logo.png" alt="Shlo's Logo" />
+      </div>
+      <a href="tel:0507787100" class="call-button">📞 050-7787-100</a>
+    </div>
+
+    <div class="mobile-overlay" id="overlay"></div>
+
+    <ul class="nav-links" id="nav-links">
+      <button id="close-menu" class="close-button">✕</button>
+      <li><a href="/index.html">ראשי</a></li>
+      <li class="has-dropdown">
+        <a href="#" id="services-link">שירותים <span class="arrow">▾</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/מעמדי-עץ-מעוצבים/מעמדי-עץ.html">מעמדי עץ מעוצבים</a></li>
+          <li><a href="/סטילס-וידאו/צילום-סטילס-ווידאו.html">צילום סטילס & וידאו</a></li>
+          <li><a href="/עמדת-צילום-לאירועים/עמדת-צילום.html">עמדת צילום</a></li>
+          <li><a href="/מיני-מי/מיני-מי.html">Mini Me</a></li>
+          <li><a href="/בלוק-עץ-לאירועים/בלוק-עץ.html">בלוקי עץ & מגנטים</a></li>
         </ul>
-      </nav>
-      <section class="stand-hero">
-        <div class="hero-overlay-content">
-          <div class="gallery-slider">
-            <img src="test.png" alt="Mini Me 1" class="slider-image active">
-            <img src="testtt.png" alt="Mini Me 2" class="slider-image">
-          </div>
-      
-          <div class="hero-text-box right-align">
-            <h2>עמדת Mini Me לאירועים</h2>
-            <p>
-              רוצים להפוך את האירוע שלכם לבלתי נשכח? הכירו את עמדת ה־<strong>Mini Me</strong> – 
-              האטרקציה החדשנית שתשאיר את האורחים שלכם פעורי פה ועם מזכרת אישית שאין כמוה!
-            </p>
-      
-            <h3>מהי עמדת Mini Me?</h3>
-            <p>
-              עמדת Mini Me היא חוויית צילום אינטראקטיבית: האורחים מצטלמים על מסך ירוק, התמונה מעובדת במקום,
-              נחתכת בצורת הדמות, ומודבקת על מעמד עץ ממותג. התוצאה? מזכרת אישית, תלת-ממדית ומרגשת – במיוחד לאירועים!
-            </p>
-      
-            <h3>למה לבחור בעמדת Mini Me שלנו?</h3>
-            <ul>
-              <li>✅ מזכרת תלת-ממדית אישית לכל אורח</li>
-              <li>🎁 התאמה אישית עם שם, לוגו או הקדשה</li>
-              <li>📸 צילום איכותי עם ציוד ותאורה מקצועיים</li>
-              <li>👩‍💼 ליווי של צוות מיומן לאורך כל האירוע</li>
-              <li>🎉 חוויה מצחיקה ומרגשת שמתאימה לכל גיל</li>
-            </ul>
-      
-            <h3>איך זה עובד?</h3>
-            <p>
-              הצילום מתבצע על מסך ירוק מיוחד, לאחר מכן אנו מעבדים את התמונה,
-              מדפיסים על נייר פוטו איכותי, חותכים אותה לפי הצורה ומעמידים על בסיס ממותג.
-              כל אורח יוצא עם פסלון אישי – שהוא גם חוויה, גם מזכרת וגם וואו!
-            </p>
-      
-            <h3>מתאים לכל סוגי האירועים:</h3>
-            <p>
-              חתונות | בר/בת מצווה | ימי הולדת | אירועים עסקיים | כנסים | תערוכות ועוד
-            </p>
-      
-            <p style="margin-top: 20px; font-weight: bold;">
-              📞 להזמנות – חייגו: <a href="tel:0507787100">050-7787-100</a><br>
-              או השאירו פרטים דרך האתר!
-            </p>
-          </div>
-          <div class="mini-me-video-container">
-            <h3>צפו בעמדת Mini Me בפעולה 🎥</h3>
-            <video controls autoplay muted loop playsinline>
-              <source src="minimevideo.mp4" type="video/mp4">
-              הדפדפן שלך לא תומך בווידאו.
-            </video>
-          </div>
+      </li>
+      <li><a href="/מבצעים-חבילות/מבצעים-חבילות.html">חבילות לכל סוגי האירועים</a></li>
+      <li><a href="/תמונות-סרטונים-מהאירוע-שלכם/תמונות-סרטונים.html">גלריה</a></li>
+      <li><a href="/שאלות-תשובות-שלכם/שאלות-שלכם.html">שאלות ותשובות</a></li>
+      <li><a href="/אודות/אודות.html">אודות</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO – מיני מי -->
+  <section class="mini-hero">
+    <div class="mini-hero-inner">
+      <!-- סליידר תמונות -->
+      <div class="gallery-slider">
+        <img src="newminimea.JPG" alt="Mini Me באירוע" class="slider-image active">
+        <img src="newminipupi.JPG" alt="דוגמא למעמדי Mini Me" class="slider-image">
+      </div>
+
+      <!-- טקסט ראשי -->
+      <div class="mini-hero-text">
+        <h1>עמדת Mini Me – הדמות שלכם על מגנט, על מעמד עץ, עם חריטה אישית</h1>
+
+        <p class="hero-subtitle">
+          מגנט חתוך בצורת הבן אדם שמצטלם, עומד על מעמד עץ איכותי עם חריטה מותאמת לאירוע –
+          זו לא עוד מזכרת, זו יצירת אומנות קטנה שכל אורח לוקח הביתה.
+        </p>
+
+        <p class="hero-body">
+          בעמדת <strong>Mini Me</strong> האורחים מצטלמים על רקע <strong>מסך לבן נקי</strong>, בעמידה מלאה,
+          עם תאורה מחמיאה, <strong>עמודי תור</strong> בצדדים לשמירת סדר וסטייל, ומצלמה מקצועית על
+          <strong>חצובה</strong> לקבלת פריימים חדים ומדויקים. לאחר הצילום, אנחנו מעבדים את התמונה, חותכים
+          אותה בצורת הדמות עצמה ומעמידים אותה על <strong>מעמד עץ</strong> עם חריטה – שם, תאריך, משפט קצר
+          או שם האירוע. התוצאה? וואו אחד גדול.
+        </p>
+
+        <ul class="hero-bullets">
+          <li>מגנט חתוך בצורת הגוף – לא עוד ריבוע רגיל על המקרר.</li>
+          <li>מעמד עץ איכותי עם חריטה אישית – מזכרת שלא זורקים.</li>
+          <li>עמדה מעוצבת עם מסך לבן, עמודי תור וחצובה – נראות יוקרתית באירוע.</li>
+          <li>תהליך מלא באירוע – צילום, עיבוד, חיתוך והעמדה על הבסיס.</li>
+          <li>מתאים לכל גיל – ילדים, בני נוער, מבוגרים וסבא־סבתא.</li>
+        </ul>
+
+        <a href="https://wa.me/972507787100" target="_blank" class="cta-button">
+          🎁 דברו איתנו על חבילת Mini Me לאירוע שלכם
+        </a>
+        <p class="hero-note">
+          * החבילות מותאמות לפי כמות מיני מי, מיקום בארץ ותנאי האירוע.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-line"></div>
+
+  <!-- הסבר – למה מיני מי -->
+  <section class="mini-info-section">
+    <div class="mini-info-inner">
+      <h2>למה מיני מי קונה כל אורח?</h2>
+
+      <p>
+        בשנים האחרונות אנשים כבר ראו הכול – מגנטים רגילים, בוקסים, בלוקים ועוד. אבל
+        <strong>Mini Me</strong> זה משהו אחר לגמרי: כל אורח מקבל דמות קטנה של עצמו, עומדת על מעמד עץ,
+        עם חריטה אישית שמתאימה בדיוק לאירוע שלכם. זו מתנה שאי אפשר להישאר אליה אדישים.
+      </p>
+
+      <p>
+        במקום עוד תמונה שתלך לאיבוד בסטורי, האורחים יוצאים עם מזכרת <strong>פיזית</strong> שנשארת
+        על המזנון, המדף או השולחן במשרד – וכל פעם שהם מסתכלים עליה, הם נזכרים באירוע שלכם.
+      </p>
+
+      <h3>איך עובדת עמדת Mini Me באירוע?</h3>
+      <ul>
+        <li><strong>הקמה לפני תחילת האירוע:</strong> אנחנו מגיעים מוקדם, מציבים מסך לבן, עמודי תור, חצובה,
+          תאורה מקצועית ומכינים את נקודת הצילום.</li>
+        <li><strong>צילום האורחים:</strong> כל אורח מצטלם בתנוחה שהוא אוהב – מצחיק, רשמי, זוגי, משפחתי.
+          אנחנו עוזרים לכוון ולייצר פוזות שייצאו מושלמות.</li>
+        <li><strong>עיבוד וחיתוך:</strong> התמונה נחתכת לפי צורת הגוף, מותאמת לגודל המעמד ומודפסת כמגנט איכותי.</li>
+        <li><strong>העמדה על מעמד עץ:</strong> כל דמות מודבקת על מעמד עץ עם חריטה אישית – של שם האירוע, התאריך
+          או מסר אישי קצר.</li>
+        <li><strong>מסירה לאורחים:</strong> האורחים מקבלים את ה־Mini Me שלהם במהלך האירוע – ומתרגשים בטירוף.</li>
+      </ul>
+
+      <h3>למי זה מתאים?</h3>
+      <p>
+        Mini Me הוא אטרקציה מעולה ל־<strong>בר/בת מצווה</strong>, <strong>חתונות צעירות</strong>,
+        <strong>ימי הולדת</strong>, אירועי חברה, השקות, כנסים ותערוכות. בכל מקום שבו רוצים
+        לתת לאנשים משהו אישי, מצחיק, יפה ומרגש – מיני מי פשוט גונב את ההצגה.
+      </p>
+
+      <p>
+        הרבה לקוחות מספרים לנו שאחרי האירוע, הדבר הראשון שהאורחים שולחים בוואטסאפ זה
+        תמונה של ה־<strong>Mini Me</strong> שלהם על השידה בבית – עם הודעה של: “איזו אטרקציה מטורפת,
+        לא ראינו כזה דבר!”. וזה בדיוק הרגע שאנחנו מכוונים אליו.
+      </p>
+    </div>
+  </section>
+
+  <!-- חבילות מיני מי -->
+  <section class="mini-packages-section">
+    <div class="mini-packages-inner">
+      <h2>חבילות Mini Me לאירוע שלכם</h2>
+      <p class="packages-intro">
+        בנינו חבילות ברורות לפי כמות מעמדי ה־Mini Me. בכל החבילות כלול צילום באירוע, הכנה במקום
+        והפקת המעמדים על עץ עם חריטה אישית. אפשר להתאים טקסט, עיצוב וסטייל לפי סוג האירוע.
+      </p>
+
+      <div class="packages-grid">
+        <!-- חבילה 1 -->
+        <div class="package-card">
+          <div class="package-label">עד 100 מיני מי</div>
+          <h3>חבילת Mini Me – לאירועים אינטימיים</h3>
+          <ul>
+            <li>עד <strong>100</strong> מעמדי Mini Me על מעמד עץ עם חריטה אישית.</li>
+            <li><strong>שעה וחצי צילום</strong> לאורחים על מסך לבן, עם עמודי תור וחצובה.</li>
+            <li><strong>שעה וחצי הכנה ועיבוד</strong> באירוע – חיתוך, הדבקה והעמדת המיני מי על המעמדים.</li>
+            <li>התאמת חריטה לעיצוב האירוע – שמות, תאריך, לוגו או משפט קצר.</li>
+          </ul>
+          <p class="package-note">
+            מושלם לבר/בת מצווה, ימי הולדת עגולים ואירועי משפחה עד כ־100 אורחים.
+          </p>
         </div>
-        
-      </section>
-      <footer class="custom-footer">
-        <div class="footer-content">
-          <h2 class="footer-title">SHLO'S - EVENT MAGNETIC & PHOTO</h2>
-          <p>החוויות הכי מרגשות נשארות איתך לתמיד – ואנחנו כאן כדי לתעד אותן בצורה הכי ייחודית שיש.</p>
-          <div class="social-icons">
-            <a href="https://wa.me/972507787100" target="_blank" aria-label="וואטסאפ">📱</a>
-            <a href="https://www.instagram.com" target="_blank" aria-label="אינסטגרם">📸</a>
-            <a href="https://www.facebook.com" target="_blank" aria-label="פייסבוק">📘</a>
-          </div>
+
+        <!-- חבילה 2 -->
+        <div class="package-card highlight">
+          <div class="package-label hot">הכי מבוקשת</div>
+          <h3>חבילת Mini Me – עד 200 מעמדים</h3>
+          <ul>
+            <li>עד <strong>200</strong> מעמדי Mini Me על מעמדי עץ איכותיים עם חריטה.</li>
+            <li><strong>שעה וחצי צילום</strong> מרוכזת של האורחים לאורך האירוע.</li>
+            <li><strong>שעה וחצי הכנה ועבודה</strong> על הדמויות במקום.</li>
+            <li>ניהול תור מסודר עם עמודי תור וזרימה נכונה של אורחים לעמדה.</li>
+          </ul>
+          <p class="package-note">
+            מתאימה לאירועים בינוניים–גדולים, בר/בת מצווה, חתונות צעירות ואירועי חברה.
+          </p>
         </div>
-        <div class="footer-bottom">
-          <p>© 2025 כל הזכויות שמורות ל־ SHLO'S EVENT MAGNETIC & PHOTO</p>
-        </div>
-      </footer>
-      <script>
-        const toggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-        const overlay = document.getElementById('overlay');
-        const closeBtn = document.getElementById('close-menu');
-        const dropdown = document.querySelector('.has-dropdown');
-        const servicesLink = document.getElementById('services-link');
-    
-        toggle.addEventListener('click', () => {
-          navLinks.classList.add('active');
-          overlay.classList.add('active');
-        });
-    
-        closeBtn.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-          overlay.classList.remove('active');
-        });
-    
-        overlay.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-          overlay.classList.remove('active');
-          dropdown.classList.remove('open');
-        });
-    
-        servicesLink.addEventListener('click', (e) => {
-          e.preventDefault();
-          dropdown.classList.toggle('open');
-        });
-    
-        document.addEventListener('click', (e) => {
-          if (!dropdown.contains(e.target) && !servicesLink.contains(e.target)) {
-            dropdown.classList.remove('open');
-          }
-        });
-      </script>
-      <script>
- 
-        const reviewForm = document.getElementById('review-form');
-        const reviewMsg = document.getElementById('review-msg');
-        const reviewScriptURL = 'https://script.google.com/macros/s/AKfycbxo6Jd4ITeMjfBklZvTXqEl6V5cJgNc7rhd4JC1HJgu0CTevA8DFfwlrv8tVYao4gIS/exec'; // שנה לכתובת שלך
-      
-        reviewForm.addEventListener('submit', e => {
-          e.preventDefault();
-          const formData = new FormData(reviewForm);
-      
-          fetch(reviewScriptURL, {
-            method: 'POST',
-            body: formData
-          })
-          .then(response => response.text())
-          .then(text => {
-            if (text.trim().toLowerCase().includes("ok")) {
-              reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
-              reviewMsg.style.color = "#00ffae";
-              reviewForm.reset();
-            } else {
-              reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
-              reviewMsg.style.color = "red";
-            }
-          })
-          .catch(error => {
-            console.error("שגיאה:", error);
-            reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
-            reviewMsg.style.color = "red";
-          });
-        });
-        </script>
-      <a href="https://wa.me/972507787100" class="whatsapp-fab" target="_blank" aria-label="שלח הודעה בוואטסאפ">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="white">
-          <path d="M19.11 17.27c-.29-.15-1.7-.84-1.96-.94s-.45-.14-.64.14-.74.93-.91 1.13-.34.21-.63.07-1.23-.45-2.35-1.44c-.87-.78-1.46-1.74-1.63-2.04s-.02-.45.12-.6c.13-.14.29-.36.44-.54s.2-.29.3-.48.05-.36-.02-.5-.64-1.54-.88-2.11c-.23-.56-.47-.48-.64-.49-.17 0-.36-.01-.56-.01s-.52.07-.79.36c-.27.29-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.21 5.08 4.5.71.3 1.27.48 1.7.61.71.23 1.36.2 1.87.12.57-.08 1.7-.7 1.94-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.35M16 3a13 13 0 0 1 11.19 19.63l1.61 5.9-6.08-1.6a13 13 0 1 1-6.72-23.93zm0 2.6a10.4 10.4 0 1 0 3.64 20.13l.54.15 3.56.93-.93-3.44-.15-.54A10.4 10.4 0 0 0 16 5.6z" />
-        </svg>
-      </a>
-      <script>
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.slider-image');
-      
-        function showNextSlide() {
-          slides[slideIndex].classList.remove('active');
-          slideIndex = (slideIndex + 1) % slides.length;
-          slides[slideIndex].classList.add('active');
-        }
-      
-        setInterval(showNextSlide, 4000); // כל 4 שניות
-      </script>
-      <div class="accessibility-wrapper">
-        <button id="accessibility-toggle" class="accessibility-button" aria-label="תפריט נגישות">
-          ♿
-        </button>
-        <div class="accessibility-menu" id="accessibility-menu">
-          <button onclick="increaseFont()">הגדלת טקסט</button>
-          <button onclick="toggleContrast()">ניגודיות גבוהה</button>
-          <button onclick="resetAccessibility()">איפוס</button>
+
+        <!-- חבילה 3 -->
+        <div class="package-card">
+          <div class="package-label combo">עד 300 מיני מי</div>
+          <h3>חבילת Mini Me – לאירועים גדולים</h3>
+          <ul>
+            <li>עד <strong>300</strong> מעמדי Mini Me – מספיק גם לאירועים גדולים עם הרבה משתתפים.</li>
+            <li>עמדת צילום מקצועית עם מסך לבן, חצובה, תאורה ועמודי תור.</li>
+            <li>זמן עבודה מרוכז במהלך האירוע להכנה והפקה של כל המעמדים.</li>
+            <li>התאמת עיצוב וחריטה לקונספט האירוע או למיתוג העסק (באירועי חברה/כנסים).</li>
+          </ul>
+          <p class="package-note">
+            מושלמת לכנסים, אירועי חברה, תערוכות ואירועים גדולים שרוצים בהם “וואו” חזק ומשהו שאנשים לוקחים הביתה.
+          </p>
         </div>
       </div>
-      <script>
-        const accBtn = document.getElementById('accessibility-btn');
-        let zoom = 1;
-      
-        accBtn.addEventListener('click', () => {
-          zoom += 0.1;
-          if (zoom > 1.5) zoom = 1;
-          document.body.style.zoom = zoom;
-        });
-      </script>
-      <script>
-        const toggleBtn = document.getElementById('accessibility-toggle');
-        const menu = document.getElementById('accessibility-menu');
-      
-        toggleBtn.addEventListener('click', () => {
-          menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        });
-      
-        function increaseFont() {
-          document.body.style.fontSize = 'larger';
+
+      <p class="packages-bottom-note">
+        * ייתכנו עלויות נוספות עבור נסיעות, בהתאם למיקום האירוע בארץ.  
+        * ניתן לשלב את עמדת Mini Me יחד עם עמדת צילום, מעמדי עץ, מגנטים וסטילס & וידאו – בחבילות משולבות.
+      </p>
+
+      <a href="https://wa.me/972507787100" target="_blank" class="cta-button packages-cta">
+        📩 שלחו לנו פרטי אירוע ונחזור אליכם עם חבילת Mini Me מותאמת
+      </a>
+    </div>
+  </section>
+
+  <!-- מדיה – וידאו ותמונות -->
+  <section class="mini-media-section">
+    <div class="mini-media-inner">
+      <h2>מיני מי בפעולה – איך זה נראה באירוע?</h2>
+      <p class="media-intro">
+        הצצה קטנה לעמדת ה־Mini Me שלנו מהשטח – איך מצלמים, איך זה נראה על המסך ואיך נראים המעמדים המוכנים.
+      </p>
+
+      <div class="mini-main-video">
+        <h3>צפו בעמדת Mini Me בפעולה 🎥</h3>
+        <video controls autoplay muted loop playsinline>
+          <source src="minimevideo.mp4" type="video/mp4">
+          הדפדפן שלך לא תומך בווידאו.
+        </video>
+      </div>
+
+      <div class="mini-thumbs">
+        <img src="newminimea.JPG" alt="מיני מי – צילום מלא על מסך לבן">
+        <img src="newminipupi.JPG" alt="מעמדי מיני מי מוכנים על שולחן באירוע">
+      </div>
+    </div>
+  </section>
+
+  <!-- ביקורות -->
+  <section class="review-form-section">
+    <h2 class="review-form-title">ספרו לנו איך היה המיני מי באירוע שלכם</h2>
+    <p class="review-intro">
+      כבר חגגתם איתנו עם עמדת Mini Me? נשמח לשמוע איך האורחים הגיבו, איך היו המעמדים והחוויה הכללית.
+      הביקורת שלכם עוזרת לנו להשתפר – ועוזרת ללקוחות הבאים לבחור אטרקציה בטוחה.
+    </p>
+    <form class="review-form" id="review-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="שמך המלא" required>
+      <input type="text" name="eventType" placeholder="סוג האירוע (למשל: בר מצווה, חתונה)" required>
+      <textarea name="review" rows="5" placeholder="כתבו לנו איך היה – השירות, האיכות, התגובות של האורחים..." required></textarea>
+      <button type="submit">שלח ביקורת</button>
+      <p id="review-msg"></p>
+    </form>
+  </section>
+
+  <!-- פוטר -->
+  <footer class="custom-footer">
+    <div class="footer-content">
+      <h2 class="footer-title">SHLO'S - EVENT MAGNETIC & PHOTO</h2>
+      <p>החוויות הכי מרגשות נשארות איתך לתמיד – ואנחנו כאן כדי לתעד ולהפוך אותן למזכרות הכי מיוחדות.</p>
+
+      <div class="footer-social-text">
+        רוצים לראות עוד מיני מי, עמדות צילום וצילומים מהשטח? עקבו אחרינו:
+      </div>
+
+      <div class="social-icons">
+        <a href="https://wa.me/972507787100" target="_blank" aria-label="וואטסאפ">📱</a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="אינסטגרם">📸</a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="פייסבוק">📘</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 כל הזכויות שמורות ל־ SHLO'S EVENT MAGNETIC & PHOTO</p>
+    </div>
+  </footer>
+
+  <!-- וואטסאפ צף -->
+  <a href="https://wa.me/972507787100" class="whatsapp-fab" target="_blank" aria-label="שלח הודעה בוואטסאפ">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="white">
+      <path d="M19.11 17.27c-.29-.15-1.7-.84-1.96-.94s-.45-.14-.64.14-.74.93-.91 1.13-.34.21-.63.07-1.23-.45-2.35-1.44c-.87-.78-1.46-1.74-1.63-2.04s-.02-.45.12-.6c.13-.14.29-.36.44-.54s.2-.29.3-.48.05-.36-.02-.5-.64-1.54-.88-2.11c-.23-.56-.47-.48-.64-.49-.17 0-.36-.01-.56-.01s-.52.07-.79.36c-.27.29-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.21 5.08 4.5.71.3 1.27.48 1.7.61.71.23 1.36.2 1.87.12.57-.08 1.7-.7 1.94-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.35M16 3a13 13 0 0 1 11.19 19.63l1.61 5.9-6.08-1.6a13 13 0 1 1-6.72-23.93zm0 2.6a10.4 10.4 0 1 0 3.64 20.13l.54.15 3.56.93-.93-3.44-.15-.54A10.4 10.4 0 0 0 16 5.6z" />
+    </svg>
+  </a>
+
+  <!-- נגישות -->
+  <div class="accessibility-wrapper">
+    <button id="accessibility-toggle" class="accessibility-button" aria-label="תפריט נגישות">
+      ♿
+    </button>
+    <div class="accessibility-menu" id="accessibility-menu">
+      <button onclick="increaseFont()">הגדלת טקסט</button>
+      <button onclick="toggleContrast()">ניגודיות גבוהה</button>
+      <button onclick="resetAccessibility()">איפוס</button>
+    </div>
+  </div>
+
+  <!-- JS ניווט -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('close-menu');
+    const dropdown = document.querySelector('.has-dropdown');
+    const servicesLink = document.getElementById('services-link');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.add('active');
+      overlay.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+      dropdown.classList.remove('open');
+    });
+
+    servicesLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target) && !servicesLink.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+  </script>
+
+  <!-- טופס ביקורת -->
+  <script>
+    const reviewForm = document.getElementById('review-form');
+    const reviewMsg  = document.getElementById('review-msg');
+    const reviewScriptURL = 'https://script.google.com/macros/s/AKfycbxo6Jd4ITeMjfBklZvTXqEl6V5cJgNc7rhd4JC1HJgu0CTevA8DFfwlrv8tVYao4gIS/exec';
+
+    reviewForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const formData = new FormData(reviewForm);
+
+      fetch(reviewScriptURL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(text => {
+        if (text.trim().toLowerCase().includes("ok")) {
+          reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
+          reviewMsg.style.color = "#00ffae";
+          reviewForm.reset();
+        } else {
+          reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
+          reviewMsg.style.color = "red";
         }
-      
-        function toggleContrast() {
-          document.body.classList.toggle('high-contrast');
-        }
-      
-        function resetAccessibility() {
-          document.body.style.fontSize = '';
-          document.body.classList.remove('high-contrast');
-        }
-      </script>
+      })
+      .catch(error => {
+        console.error("שגיאה:", error);
+        reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
+        reviewMsg.style.color = "red";
+      });
+    });
+  </script>
+
+  <!-- סליידר תמונות -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slider-image');
+
+    function showNextSlide() {
+      if (!slides.length) return;
+      slides[slideIndex].classList.remove('active');
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }
+
+    if (slides.length > 1) {
+      setInterval(showNextSlide, 4000);
+    }
+  </script>
+
+  <!-- נגישות בסיסית -->
+  <script>
+    const toggleBtn = document.getElementById('accessibility-toggle');
+    const menu = document.getElementById('accessibility-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    });
+
+    function increaseFont() {
+      document.body.style.fontSize = '18px';
+    }
+
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+    }
+
+    function resetAccessibility() {
+      document.body.style.fontSize = '';
+      document.body.classList.remove('high-contrast');
+    }
+  </script>
 </body>
 </html>

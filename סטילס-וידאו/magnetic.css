@@ -1,0 +1,700 @@
+/* בסיס כללי */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
+  direction: rtl;
+  background: linear-gradient(180deg, #07121f 0%, #0a0e1b 100%);
+  color: #ffffff;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* טיפוגרפיה */
+h1, h2, h3 {
+  margin: 0 0 0.75rem;
+  font-weight: 800;
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 180, 255, 0.5);
+}
+
+p, li {
+  font-size: 1rem;
+}
+
+a {
+  color: #00d1ff;
+  text-decoration: none;
+}
+
+/* ניווט עליון */
+.navbar {
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo img {
+  height: 64px;
+  object-fit: contain;
+}
+
+.menu-toggle {
+  font-size: 1.6rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.call-button {
+  background: linear-gradient(135deg, #0ea5e9, #0369a1);
+  color: #ffffff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.8);
+  white-space: nowrap;
+}
+
+/* תפריט צד במובייל */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #020617;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  padding: 2rem 1.5rem;
+  list-style: none;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  gap: 1rem;
+  opacity: 0;
+}
+
+.nav-links.active {
+  transform: translateX(0);
+  opacity: 1;
+  display: flex;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links li a:hover {
+  color: #38bdf8;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.7);
+  z-index: 999;
+}
+
+.mobile-overlay.active {
+  display: block;
+}
+
+/* דרופדאון שירותים */
+.has-dropdown {
+  position: relative;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-right: 4px;
+}
+
+.has-dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #020617;
+  padding: 0.5rem 0;
+  list-style: none;
+  margin-top: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+  min-width: 220px;
+  z-index: 1001;
+}
+
+.has-dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 0.45rem 1rem;
+  display: block;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(30, 64, 175, 0.7);
+}
+
+/* HERO */
+.stills-hero {
+  padding: 80px 16px 60px;
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 60%, #000 100%);
+}
+
+.stills-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.stills-hero-media {
+  flex: 1 1 320px;
+  max-width: 500px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.stills-hero-text {
+  flex: 1 1 320px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(8, 47, 73, 0.96));
+  border-radius: 24px;
+  padding: 26px 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+  text-align: right;
+}
+
+.stills-hero-text .hero-subtitle {
+  font-size: 1rem;
+  color: #7bdcff;
+  margin-bottom: 0.75rem;
+}
+
+.stills-hero-text .hero-body {
+  margin-bottom: 0.75rem;
+  font-size: 0.98rem;
+}
+
+.hero-bullets {
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.hero-bullets li {
+  position: relative;
+  padding-right: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.hero-bullets li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #22c55e;
+}
+
+.hero-note {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  color: #e5e7eb;
+}
+
+/* כפתור */
+.cta-button {
+  display: inline-block;
+  margin-top: 0.3rem;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  transform: translateY(-1px);
+}
+
+/* קו מפריד */
+.divider-line {
+  height: 3px;
+  background: linear-gradient(to left, #0ea5e9, #22c55e);
+  width: 100%;
+}
+
+/* סקשן מידע */
+.stills-info-section {
+  background: linear-gradient(rgba(3, 7, 18, 1), rgba(3, 7, 18, 1));
+  padding: 70px 16px;
+}
+
+.stills-info-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 22px;
+  padding: 32px 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+.stills-info-inner p {
+  margin-bottom: 0.8rem;
+}
+
+/* חבילות */
+.stills-packages-section {
+  background: radial-gradient(circle at top, #020617 0%, #020617 60%, #000 100%);
+  padding: 70px 16px;
+}
+
+.stills-packages-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 22px;
+  padding: 32px 24px;
+  text-align: right;
+}
+
+.packages-intro {
+  margin-bottom: 1.2rem;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.package-card {
+  background: rgba(15, 23, 42, 0.98);
+  border-radius: 18px;
+  padding: 18px 16px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.package-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.package-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.6rem;
+}
+
+.package-card li {
+  position: relative;
+  padding-right: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.package-card li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #38bdf8;
+}
+
+.package-note {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.package-card.highlight {
+  border: 1px solid #22c55e;
+}
+
+.package-label {
+  position: absolute;
+  top: -12px;
+  right: 12px;
+  background: #1e293b;
+  color: #e5e7eb;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.package-label.hot {
+  background: #22c55e;
+  color: #022c22;
+  font-weight: 700;
+}
+
+.package-label.combo {
+  background: #0ea5e9;
+  color: #022c3a;
+  font-weight: 700;
+}
+
+.packages-cta {
+  margin-top: 1.3rem;
+}
+
+.packages-bottom-note {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+/* מדיה */
+.stills-media-section {
+  background: linear-gradient(rgba(3, 7, 18, 1), rgba(3, 7, 18, 1));
+  padding: 70px 16px;
+}
+
+.stills-media-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.media-intro {
+  margin-bottom: 1.2rem;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* טופס ביקורת */
+.review-form-section {
+  background: radial-gradient(circle at top, #020617 0%, #020617 60%, #000 100%);
+  padding: 70px 16px;
+  text-align: center;
+}
+
+.review-form-title {
+  margin-bottom: 0.5rem;
+}
+
+.review-intro {
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+  color: #e5e7eb;
+}
+
+.review-form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-form input,
+.review-form textarea {
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.review-form button {
+  margin-top: 4px;
+}
+
+#review-msg {
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+/* פוטר */
+.custom-footer {
+  background-color: #020617;
+  color: #f9fafb;
+  text-align: center;
+  padding: 40px 16px 20px;
+  border-top: 2px solid #1e293b;
+}
+
+.footer-content {
+  max-width: 700px;
+  margin: 0 auto 16px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-social-text {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.social-icons {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.6);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.social-circle.wa {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.social-circle.ig {
+  background: radial-gradient(circle at 30% 30%, #fdf497 0, #fd5949 40%, #d6249f 70%, #285AEB 100%);
+}
+
+.social-circle.fb {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.social-circle:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.8);
+  opacity: 0.95;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1f2933;
+  padding-top: 10px;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* וואטסאפ צף */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(to bottom right, #25D366, #128C7E);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
+}
+
+/* נגישות */
+.accessibility-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.accessibility-button {
+  background: linear-gradient(to right, #0ea5e9, #6366f1);
+  color: #ffffff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.accessibility-menu {
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  padding: 8px;
+  margin-bottom: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.accessibility-menu button {
+  background: #0ea5e9;
+  color: #ffffff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.accessibility-menu button:hover {
+  background: #0369a1;
+}
+
+/* מצב ניגודיות גבוהה */
+body.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  /* HERO – שורות אחת מתחת לשנייה ומלא רוחב */
+  .stills-hero {
+    padding: 70px 12px 40px;
+  }
+
+  .stills-hero-inner {
+    flex-direction: column;        /* תמונה מעל / מתחת לטקסט */
+    align-items: stretch;
+  }
+
+  .stills-hero-media {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;                   /* שלא יוסיף רווח פנימי לתמונה */
+    border-radius: 20px;
+  }
+
+  .stills-hero-media img {
+    width: 100%;
+    height: auto;                 /* בלי חיתוך – שומר יחס מקורי */
+    display: block;
+  }
+
+  .stills-hero-text,
+  .stills-info-inner,
+  .stills-packages-inner,
+  .stills-media-inner {
+    padding: 22px 18px;
+  }
+
+  .navbar-container {
+    gap: 12px;
+  }
+
+  .call-button {
+    font-size: 0.8rem;
+  }
+
+  /* גלריית התמונות למטה – עמודה אחת ותמונה מלאה */
+  .media-grid {
+    grid-template-columns: 1fr;   /* במקום כמה עמודות */
+  }
+
+  .media-item img,
+  .media-item video {
+    width: 100%;
+    height: auto;                 /* בלי גובה קבוע => לא חתוך */
+  }
+
+  .accessibility-wrapper {
+    bottom: 80px;
+  }
+}

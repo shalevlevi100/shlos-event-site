@@ -1,348 +1,478 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>גלריית תמונות מהאירועים שלנו – Shlo’s Event</title>
-<meta name="description" content="צפו בתמונות מאירועים אמיתיים שצילמנו – מגנטים, בלוקים, מיני מי, עמדות צילום ועוד. השראה לאירוע הבא שלכם.">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17170570865"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>גלריית תמונות מאירועים | SHLO'S EVENT</title>
+  <meta name="description" content="תמונות וסרטונים מאירועים אמיתיים – עמדת צילום, מגנטים, מעמדי עץ, Mini Me, בלוקים וסטילס & וידאו. קבלו השראה לאירוע שלכם.">
 
-  gtag('config', 'AW-17170570865');
-</script>
-    <link rel="stylesheet" href="galery.css">
-    <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '23964898983166742');
-  fbq('track', 'PageView');
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17170570865"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17170570865');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=23964898983166742&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-</head>
-<body>
-    <nav class="navbar">
-        <div class="navbar-container">
-          <div class="menu-toggle" id="menu-toggle">☰</div>
-          <div class="logo">
-            <img src="/logo.png" alt="Shlo's Logo" />
-          </div>
-          <a href="tel:0507787100" class="call-button">📞 050-7787-100</a>
-        </div>
-        <div class="mobile-overlay" id="overlay"></div>
-        <ul class="nav-links" id="nav-links">
-          <button id="close-menu" class="close-button">✕</button>
-          <li><a href="/index.html">ראשי</a></li>
-          <li class="has-dropdown">
-            <a href="#" id="services-link">שירותים <span class="arrow">▾</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/מעמדי-עץ-מעוצבים/מעמדי-עץ.html">מעמדי עץ מעוצבים </a></li>
-              <li><a href="/מגנטים-לאירועים/מגנטים.html">מגנטים</a></li>
-              <li><a href="/עמדת-צילום-לאירועים/עמדת-צילום.html">עמדת צילום</a></li>
-              <li><a href="/מיני-מי/מיני-מי.html">Mini Me</a></li>
-              <li><a href="/בלוק-עץ-לאירועים/בלוק-עץ.html">בלוקי עץ לאירועים</a></li>
-            </ul>
-          </li>
-          <li><a href="/תמונות-סרטונים-מהאירוע-שלכם/תמונות-סרטונים.html">גלריה</a></li>
-          <li><a href="/שאלות-תשובות-שלכם/שאלות-שלכם.html">שאלות ותשובות</a></li>
-          <li><a href="/אודות/אודות.html">אודות</a></li>
-        </ul>
-      </nav>
-      <!-- ======= גלריית תמונות + סרטונים עם טאבים ======= -->
-      <section class="gallery-section">
-        <h2 class="gallery-title enhanced">גלריה מהאירועים</h2>
-        <p class="gallery-subtitle">ככה זה נראה כשאנחנו באירוע – רגעים אמיתיים, מלאים באור וחיוך 📸</p>
-      
-        <div class="tab-buttons">
-          <button class="tab-button active" onclick="showTab('photos')">תמונות</button>
-          <button class="tab-button" onclick="showTab('videos')">סרטונים</button>
-        </div>
-      
-        <div id="photos" class="tab-content active">
-          <div class="media-grid">
-            <div class="media-item">
-              <img src="imageblock.jpeg" alt="תמונה 1" onclick="openLightbox(this)">
-            </div>
-            <div class="media-item">
-              <img src="/עמדת-צילום-לאירועים/phtowithstand.jpeg" alt="תמונה 2" onclick="openLightbox(this)">
-            </div>
-            <div class="media-item">
-              <img src="/עמדת-צילום-לאירועים/standdd.jpeg" alt="תמונה 3" onclick="openLightbox(this)">
-            </div>
-          </div>
-        </div>
-      
-        <div id="videos" class="tab-content">
-          <div class="media-grid">
-            <div class="media-item">
-        
-            </div>
-            <div class="media-item">
-              <video controls playsinline preload="metadata" muted poster="standgrround.jpeg">
-                <source src="allproduct.mp4" type="video/mp4">
-                הדפדפן שלך לא תומך בווידאו.
-              </video>
-            </div>
-            
-            <div class="media-item">
-              <video controls playsinline preload="metadata" muted poster="newground.jpeg">
-                <source src="minimesupersofi.mp4" type="video/mp4">
-                הדפדפן שלך לא תומך בווידאו.
-              </video>
-            </div>
-      </section>
-      <section class="review-form-section">
-        <h2 class="review-form-title">השאירו לנו ביקורת</h2>
-        <form class="review-form" id="review-form" action="#" method="POST">
-          <input type="text" name="name" placeholder="שמך המלא" required>
-          <input type="text" name="eventType" placeholder="סוג האירוע (למשל: חתונה)" required>
-          <textarea name="review" rows="5" placeholder="כתוב את הביקורת שלך כאן..." required></textarea>
-          <button type="submit">שלח ביקורת</button>
-          <p id="review-msg" style="color: white; font-weight: bold; margin-top: 10px;"></p>
 
-        </form>
-      </section>
-      <footer class="custom-footer">
-        <div class="footer-content">
-          <h2 class="footer-title">SHLO'S - EVENT MAGNETIC & PHOTO</h2>
-          <p>החוויות הכי מרגשות נשארות איתך לתמיד – ואנחנו כאן כדי לתעד אותן בצורה הכי ייחודית שיש.</p>
-          <div class="social-icons">
-            <a href="https://wa.me/972507787100" target="_blank" aria-label="וואטסאפ">📱</a>
-            <a href="https://www.instagram.com" target="_blank" aria-label="אינסטגרם">📸</a>
-            <a href="https://www.facebook.com" target="_blank" aria-label="פייסבוק">📘</a>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '23964898983166742');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=23964898983166742&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- פונט + CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="galery.css">
+</head>
+
+<body>
+  <!-- ניווט עליון תואם לכל האתר -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="logo">
+        <img src="/logo.png" alt="לוגו SHLO's מגנטים וצילום" />
+      </div>
+      <a href="tel:0507787100" class="call-button">📞 050-7787-100</a>
+    </div>
+
+    <div class="mobile-overlay" id="overlay"></div>
+
+    <ul class="nav-links" id="nav-links">
+      <button id="close-menu" class="close-button">✕</button>
+      <li><a href="/index.html">ראשי</a></li>
+      <li class="has-dropdown">
+        <a href="#" id="services-link">שירותים <span class="arrow">▾</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/מעמדי-עץ-מעוצבים/מעמדי-עץ.html">מעמדי עץ מעוצבים</a></li>
+          <li><a href="/סטילס-וידאו/צילום-סטילס-ווידאו.html">צילום סטילס & וידאו</a></li>
+          <li><a href="/עמדת-צילום-לאירועים/עמדת-צילום.html">עמדת צילום</a></li>
+          <li><a href="/מיני-מי/מיני-מי.html">Mini Me</a></li>
+          <li><a href="/בלוק-עץ-לאירועים/בלוק-עץ.html">בלוקי עץ & מגנטים</a></li>
+        </ul>
+      </li>
+      <li><a href="/מבצעים-חבילות/מבצעים-חבילות.html">חבילות לכל סוגי האירועים</a></li>
+      <li><a href="/תמונות-סרטונים-מהאירוע-שלכם/תמונות-סרטונים.html">גלריה</a></li>
+      <li><a href="/שאלות-תשובות-שלכם/שאלות-שלכם.html">שאלות ותשובות</a></li>
+      <li><a href="/אודות/אודות.html">אודות</a></li>
+    </ul>
+  </nav>
+
+  <!-- הירו גלריה -->
+  <section class="gallery-hero">
+    <div class="gallery-hero-inner">
+      <div class="gallery-hero-text">
+        <h1>גלריית אירועים – תנו לתמונות לדבר</h1>
+        <p class="gallery-hero-subtitle">
+          ככה זה נראה כש־<strong>SHLO'S EVENT</strong> מגיעים לאירוע: עמדות צילום מעוצבות, מגנטים, מעמדי עץ,
+          Mini Me, סטילס & וידאו – רגעים אמיתיים של אורחים שמחים.
+        </p>
+        <ul class="gallery-hero-bullets">
+          <li>תמונות וסרטונים מאירועים אמיתיים – חתונות, בר/בת מצווה, ימי הולדת ואירועי חברה.</li>
+          <li>מגוון שירותים: עמדת צילום, מגנטים, בלוקי עץ, Mini Me וצילום מקצועי.</li>
+          <li>השראה ישירות מהשטח כדי שתוכלו לדמיין את האירוע שלכם.</li>
+        </ul>
+
+        <a href="#gallery" class="cta-button">📸 גללו למטה וצפו בגלריה</a>
+        <p class="gallery-hero-note">
+          אם משהו תפס לכם את העין – דברו איתנו ונבנה לכם חבילה דומה, מותאמת לתקציב שלכם.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-line"></div>
+
+  <!-- גלריה + טאבים -->
+  <section class="gallery-section" id="gallery">
+    <h2 class="gallery-title">גלריה מהאירועים שלנו</h2>
+    <p class="gallery-subtitle">
+      בחרו מה בא לכם לראות – תמונות או סרטונים – ולחצו על כל פריט כדי לראות אותו בגדול.
+    </p>
+
+    <div class="tab-buttons">
+      <button class="tab-button active" onclick="showTab('photos', this)">תמונות</button>
+      <button class="tab-button" onclick="showTab('videos', this)">סרטונים</button>
+    </div>
+
+    <!-- טאב תמונות -->
+    <div id="photos" class="tab-content active">
+      <div class="media-grid">
+        <div class="media-item" data-label="מעמדי עץ בעיצוב אישי">
+          <img src="imageblock.jpeg" alt="מעמדי עץ בעיצוב אישי" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמדי עץ בעיצוב אישי</span>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>© 2025 כל הזכויות שמורות ל־ SHLO'S EVENT MAGNETIC & PHOTO</p>
+
+        <div class="media-item" data-label="עמדת צילום באירוע חוץ">
+          <img src="/עמדת-צילום-לאירועים/phtowithstand.jpeg" alt="עמדת צילום באירוע" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>עמדת צילום מעוצבת – צילום + הדפסה במקום</span>
+          </div>
         </div>
-      </footer>
-      <script>
-        const toggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-        const overlay = document.getElementById('overlay');
-        const closeBtn = document.getElementById('close-menu');
-        const dropdown = document.querySelector('.has-dropdown');
-        const servicesLink = document.getElementById('services-link');
-    
-        toggle.addEventListener('click', () => {
-          navLinks.classList.add('active');
-          overlay.classList.add('active');
-        });
-    
-        closeBtn.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-          overlay.classList.remove('active');
-        });
-    
-        overlay.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-          overlay.classList.remove('active');
-          dropdown.classList.remove('open');
-        });
-    
-        servicesLink.addEventListener('click', (e) => {
-          e.preventDefault();
-          dropdown.classList.toggle('open');
-        });
-    
-        document.addEventListener('click', (e) => {
-          if (!dropdown.contains(e.target) && !servicesLink.contains(e.target)) {
-            dropdown.classList.remove('open');
-          }
-        });
-      </script>
-           <script>
- 
-            const reviewForm = document.getElementById('review-form');
-            const reviewMsg = document.getElementById('review-msg');
-            const reviewScriptURL = 'https://script.google.com/macros/s/AKfycbyp5lCGoXjkwT30yC92PPF1YVk6pomchghR-nuksVmDqa6oHeL-380d3rNQTWNzWsI/exec'; // שנה לכתובת שלך
-          
-            reviewForm.addEventListener('submit', e => {
-              e.preventDefault();
-              const formData = new FormData(reviewForm);
-          
-              fetch(reviewScriptURL, {
-                method: 'POST',
-                body: formData
-              })
-              .then(response => response.text())
-              .then(text => {
-                if (text.trim().toLowerCase().includes("ok")) {
-                  reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
-                  reviewMsg.style.color = "#00ffae";
-                  reviewForm.reset();
-                } else {
-                  reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
-                  reviewMsg.style.color = "red";
-                }
-              })
-              .catch(error => {
-                console.error("שגיאה:", error);
-                reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
-                reviewMsg.style.color = "red";
-              });
-            });
-            </script>
-            <script>
-              function openLightbox(img) {
-                const lightbox = document.getElementById('lightbox');
-                const lightboxImg = document.getElementById('lightbox-img');
-                lightboxImg.src = img.src;
-                lightbox.style.display = 'flex';
-              }
-            
-              function closeLightbox() {
-                document.getElementById('lightbox').style.display = 'none';
-              }
-            
-              function openVideoLightbox(videoEl) {
-                const src = videoEl.querySelector('source').src;
-                const lightboxVideo = document.getElementById('lightbox-video');
-                lightboxVideo.src = src;
-                document.getElementById('video-lightbox').style.display = 'flex';
-              }
-            
-              function closeVideoLightbox() {
-                const lightbox = document.getElementById('video-lightbox');
-                const lightboxVideo = document.getElementById('lightbox-video');
-                lightboxVideo.pause();
-                lightboxVideo.src = '';
-                lightbox.style.display = 'none';
-              }
-            </script>
-            <script>
-              function showTab(tabName) {
-                document.querySelectorAll('.tab-content').forEach(tab => {
-                  tab.classList.remove('active');
-                });
-                document.getElementById(tabName).classList.add('active');
-            
-                document.querySelectorAll('.tab-button').forEach(btn => {
-                  btn.classList.remove('active');
-                });
-                event.target.classList.add('active');
-              }
-            
-              function openLightbox(img) {
-                document.getElementById('lightbox-img').src = img.src;
-                document.getElementById('lightbox').style.display = 'flex';
-              }
-            
-              function closeLightbox() {
-                document.getElementById('lightbox').style.display = 'none';
-              }
-            
-              function openVideoLightbox(videoEl) {
-                const src = videoEl.querySelector('source').src;
-                const lightboxVideo = document.getElementById('lightbox-video');
-                lightboxVideo.src = src;
-                document.getElementById('video-lightbox').style.display = 'flex';
-              }
-            
-              function closeVideoLightbox() {
-                const videoBox = document.getElementById('video-lightbox');
-                const lightboxVideo = document.getElementById('lightbox-video');
-                lightboxVideo.pause();
-                lightboxVideo.src = '';
-                videoBox.style.display = 'none';
-              }
-            </script>
-            <script>
-              function showTab(tabName) {
-                document.querySelectorAll('.tab-content').forEach(tab => {
-                  tab.classList.remove('active');
-                });
-                document.getElementById(tabName).classList.add('active');
-            
-                document.querySelectorAll('.tab-button').forEach(btn => {
-                  btn.classList.remove('active');
-                });
-                event.target.classList.add('active');
-              }
-            
-              function openLightbox(img) {
-                document.getElementById('lightbox-img').src = img.src;
-                document.getElementById('lightbox').style.display = 'flex';
-              }
-            
-              function closeLightbox() {
-                document.getElementById('lightbox').style.display = 'none';
-              }
-            
-              function openVideoLightbox(videoEl) {
-                const src = videoEl.querySelector('source').src;
-                const lightboxVideo = document.getElementById('lightbox-video');
-                lightboxVideo.src = src;
-                document.getElementById('video-lightbox').style.display = 'flex';
-              }
-            
-              function closeVideoLightbox() {
-                const videoBox = document.getElementById('video-lightbox');
-                const lightboxVideo = document.getElementById('lightbox-video');
-                lightboxVideo.pause();
-                lightboxVideo.src = '';
-                videoBox.style.display = 'none';
-              }
-            </script>
-            
-      <a href="https://wa.me/972507787100" class="whatsapp-fab" target="_blank" aria-label="שלח הודעה בוואטסאפ">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="white">
-          <path d="M19.11 17.27c-.29-.15-1.7-.84-1.96-.94s-.45-.14-.64.14-.74.93-.91 1.13-.34.21-.63.07-1.23-.45-2.35-1.44c-.87-.78-1.46-1.74-1.63-2.04s-.02-.45.12-.6c.13-.14.29-.36.44-.54s.2-.29.3-.48.05-.36-.02-.5-.64-1.54-.88-2.11c-.23-.56-.47-.48-.64-.49-.17 0-.36-.01-.56-.01s-.52.07-.79.36c-.27.29-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.21 5.08 4.5.71.3 1.27.48 1.7.61.71.23 1.36.2 1.87.12.57-.08 1.7-.7 1.94-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.35M16 3a13 13 0 0 1 11.19 19.63l1.61 5.9-6.08-1.6a13 13 0 1 1-6.72-23.93zm0 2.6a10.4 10.4 0 1 0 3.64 20.13l.54.15 3.56.93-.93-3.44-.15-.54A10.4 10.4 0 0 0 16 5.6z" />
-        </svg>
-      </a>
-      <div class="accessibility-wrapper">
-        <button id="accessibility-toggle" class="accessibility-button" aria-label="תפריט נגישות">
-          ♿
-        </button>
-        <div class="accessibility-menu" id="accessibility-menu">
-          <button onclick="increaseFont()">הגדלת טקסט</button>
-          <button onclick="toggleContrast()">ניגודיות גבוהה</button>
-          <button onclick="resetAccessibility()">איפוס</button>
+
+        <div class="media-item" data-label="עמדת צילום באולם">
+          <img src="/עמדת-צילום-לאירועים/standdd.jpeg" alt="עמדת צילום" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>עמדת צילום באולם – רגעים מצולמים לכל האורחים</span>
+          </div>
+        </div>
+
+        <div class="media-item" data-label="Mini Me – מזכרת אישית">
+          <img src="standgrround.jpeg" alt="Mini Me" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>Mini Me – דמויות אישיות כמזכרת מהאירוע</span>
+          </div>
+        </div>
+
+        <div class="media-item" data-label="שילוב מגנטים + בלוק עץ">
+          <img src="newground.jpeg" alt="שילוב מגנטים ובלוק" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>שילוב מגנטים ובלוקי עץ – גם על המקרר וגם בסלון</span>
+          </div>
+        </div>
+
+        <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+          <img src="imageblock.jpeg" alt="מעמד עץ" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+          </div>
+        </div>
+        <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+          <img src="emdanew.jpg" alt="מעמד עץ" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+          </div>
+        </div>
+        <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+          <img src="rr.JPG" alt="מעמד עץ" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+          </div>
+        </div>
+        <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+          <img src="emdatpic.JPG" alt="מעמד עץ" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+          </div>
+        </div>
+        <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+          <img src="emdatgalya.jpg" alt="מעמד עץ" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+          </div>
+        </div>
+        <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+          <img src="mamdonee.JPG" alt="מעמד עץ" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+          </div>
+        </div>
+        <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+          <img src="mamdeee.jpeg" alt="מעמד עץ" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+          </div>
+        </div>
+        <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+          <img src="saharo.jpeg" alt="מעמד עץ" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+          </div>
+        </div>
+        <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+          <img src="saharstils.jpg" alt="מעמד עץ" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+          </div>
+        </div>
+        <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+          <img src="pict.JPG" alt="מעמד עץ" onclick="openLightbox(this)">
+          <div class="media-overlay">
+            <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+          </div>
+          <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+            <img src="picone.JPG" alt="מעמד עץ" onclick="openLightbox(this)">
+            <div class="media-overlay">
+              <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+            </div>
+          </div>
+          <div class="media-item" data-label="מעמד עץ עם צילום מהעמדה">
+            <img src="pictwo.JPG" alt="מעמד עץ" onclick="openLightbox(this)">
+            <div class="media-overlay">
+              <span>מעמד עץ אישי לכל אורח – חוויית פרימיום</span>
+            </div>
+          </div>
         </div>
       </div>
-      <script>
-        const accBtn = document.getElementById('accessibility-btn');
-        let zoom = 1;
-      
-        accBtn.addEventListener('click', () => {
-          zoom += 0.1;
-          if (zoom > 1.5) zoom = 1;
-          document.body.style.zoom = zoom;
-        });
-      </script>
-      <script>
-        const toggleBtn = document.getElementById('accessibility-toggle');
-        const menu = document.getElementById('accessibility-menu');
-      
-        toggleBtn.addEventListener('click', () => {
-          menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        });
-      
-        function increaseFont() {
-          document.body.style.fontSize = 'larger';
-        }
-      
-        function toggleContrast() {
-          document.body.classList.toggle('high-contrast');
-        }
-      
-        function resetAccessibility() {
-          document.body.style.fontSize = '';
-          document.body.classList.remove('high-contrast');
-        }
-      </script>
+    </div>
+
+    <!-- טאב סרטונים -->
+    <div id="videos" class="tab-content">
+      <div class="media-grid">
+        <div class="media-item video-item" data-label="כל המוצרים בפעולה">
+          <video playsinline muted preload="metadata" poster="standgrround.jpeg" onclick="openVideoLightbox(this)">
+            <source src="allproduct.mp4" type="video/mp4">
+            הדפדפן שלך לא תומך בווידאו.
+          </video>
+          <div class="media-overlay">
+            <span>כל המוצרים שלנו באירוע אחד</span>
+          </div>
+        </div>
+
+        <div class="media-item video-item" data-label="Mini Me באירוע אמיתי">
+          <video playsinline muted preload="metadata" poster="newground.jpeg" onclick="openVideoLightbox(this)">
+            <source src="minimesupersofi.mp4" type="video/mp4">
+            הדפדפן שלך לא תומך בווידאו.
+          </video>
+          <video playsinline muted preload="metadata" poster="newground.jpeg" onclick="openVideoLightbox(this)">
+            <source src="emdatvideooo.mp4" type="video/mp4">
+            הדפדפן שלך לא תומך בווידאו.
+          </video>
+          <video playsinline muted preload="metadata" poster="newground.jpeg" onclick="openVideoLightbox(this)">
+            <source src="newvideoeth.mp4" type="video/mp4">
+            הדפדפן שלך לא תומך בווידאו.
+          </video>
+          <video playsinline muted preload="metadata" poster="newground.jpeg" onclick="openVideoLightbox(this)">
+            <source src="videoone.mp4" type="video/mp4">
+            הדפדפן שלך לא תומך בווידאו.
+          </video>
+          <video playsinline muted preload="metadata" poster="newground.jpeg" onclick="openVideoLightbox(this)">
+            <source src="videotwo.mp4" type="video/mp4">
+            הדפדפן שלך לא תומך בווידאו.
+          </video>
+          <div class="media-overlay">
+            <span>Mini Me – הפינה שהאורחים לא מפסיקים לדבר עליה</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- לייטבוקס לתמונות -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">✕</span>
+    <img id="lightbox-img" alt="תמונה מוגדלת">
+  </div>
+
+  <!-- לייטבוקס לווידאו -->
+  <div id="video-lightbox" class="lightbox" onclick="closeVideoLightbox()">
+    <span class="lightbox-close">✕</span>
+    <video id="lightbox-video" controls></video>
+  </div>
+
+  <!-- טופס ביקורת -->
+  <section class="review-form-section">
+    <h2 class="review-form-title">כבר ראיתם אותנו באירוע? ספרו איך היה</h2>
+    <p class="review-intro">
+      הביקורת שלכם חשובה לנו ועוזרת ללקוחות אחרים לבחור בנו בביטחון.
+    </p>
+    <form class="review-form" id="review-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="שמך המלא" required>
+      <input type="text" name="eventType" placeholder="סוג האירוע (למשל: חתונה, בר מצווה)" required>
+      <textarea name="review" rows="5" placeholder="ספרו על החוויה שלכם – השירות, האווירה והצילום..." required></textarea>
+      <button type="submit">שלח ביקורת</button>
+      <p id="review-msg"></p>
+    </form>
+  </section>
+
+  <!-- פוטר -->
+  <footer class="custom-footer">
+    <div class="footer-content">
+      <h2 class="footer-title">SHLO'S - EVENT MAGNETIC & PHOTO</h2>
+      <p>עמדות צילום, מגנטים, בלוקי עץ, Mini Me וסטילס & וידאו – כל מה שצריך כדי להפוך את האירוע שלכם לחוויה מצולמת שלא שוכחים.</p>
+
+      <div class="footer-social-text">
+        רוצים לראות עוד תכנים מאירועים? עקבו אחרינו:
+      </div>
+
+      <div class="social-icons">
+        <a href="https://wa.me/972507787100"
+           target="_blank"
+           aria-label="וואטסאפ"
+           class="social-circle wa">📱</a>
+
+        <a href="https://www.instagram.com"
+           target="_blank"
+           aria-label="אינסטגרם"
+           class="social-circle ig">📸</a>
+
+        <a href="https://www.facebook.com"
+           target="_blank"
+           aria-label="פייסבוק"
+           class="social-circle fb">📘</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 כל הזכויות שמורות ל־ SHLO'S EVENT MAGNETIC & PHOTO</p>
+    </div>
+  </footer>
+
+  <!-- וואטסאפ צף -->
+  <a href="https://wa.me/972507787100" class="whatsapp-fab" target="_blank" aria-label="שלח הודעה בוואטסאפ">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="white">
+      <path d="M19.11 17.27c-.29-.15-1.7-.84-1.96-.94s-.45-.14-.64.14-.74.93-.91 1.13-.34.21-.63.07-1.23-.45-2.35-1.44c-.87-.78-1.46-1.74-1.63-2.04s-.02-.45.12-.6c.13-.14.29-.36.44-.54s.2-.29.3-.48.05-.36-.02-.5-.64-1.54-.88-2.11c-.23-.56-.47-.48-.64-.49-.17 0-.36-.01-.56-.01s-.52.07-.79.36c-.27.29-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.21 5.08 4.5.71.3 1.27.48 1.7.61.71.23 1.36.2 1.87.12.57-.08 1.7-.7 1.94-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.2-.55-.35M16 3a13 13 0 0 1 11.19 19.63l1.61 5.9-6.08-1.6a13 13 0 1 1-6.72-23.93zm0 2.6a10.4 10.4 0 1 0 3.64 20.13l.54.15 3.56.93-.93-3.44-.15-.54A10.4 10.4 0 0 0 16 5.6z" />
+    </svg>
+  </a>
+
+  <!-- נגישות -->
+  <div class="accessibility-wrapper">
+    <button id="accessibility-toggle" class="accessibility-button" aria-label="תפריט נגישות">
+      ♿
+    </button>
+    <div class="accessibility-menu" id="accessibility-menu">
+      <button onclick="increaseFont()">הגדלת טקסט</button>
+      <button onclick="toggleContrast()">ניגודיות גבוהה</button>
+      <button onclick="resetAccessibility()">איפוס</button>
+    </div>
+  </div>
+
+  <!-- JS תפריט ניווט -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('close-menu');
+    const dropdown = document.querySelector('.has-dropdown');
+    const servicesLink = document.getElementById('services-link');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.add('active');
+      overlay.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+      dropdown.classList.remove('open');
+    });
+
+    servicesLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target) && !servicesLink.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+  </script>
+
+  <!-- JS לשליחת ביקורת -->
+  <script>
+    const reviewForm = document.getElementById('review-form');
+    const reviewMsg  = document.getElementById('review-msg');
+    const reviewScriptURL = 'https://script.google.com/macros/s/AKfycbyp5lCGoXjkwT30yC92PPF1YVk6pomchghR-nuksVmDqa6oHeL-380d3rNQTWNzWsI/exec';
+
+    reviewForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const formData = new FormData(reviewForm);
+
+      fetch(reviewScriptURL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(text => {
+        reviewMsg.innerHTML = "✅ הביקורת נשלחה בהצלחה!";
+        reviewMsg.style.color = "#00ffae";
+        reviewForm.reset();
+      })
+      .catch(error => {
+        console.error("שגיאה:", error);
+        reviewMsg.innerHTML = "❌ לא הצלחנו לשלוח את הביקורת, נסו שוב מאוחר יותר.";
+        reviewMsg.style.color = "#ff7676";
+      });
+    });
+  </script>
+
+  <!-- JS גלריה: טאבים + לייטבוקס -->
+  <script>
+    function showTab(tabName, btn) {
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.getElementById(tabName).classList.add('active');
+
+      document.querySelectorAll('.tab-button').forEach(b => {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+    }
+
+    function openLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+
+    function openVideoLightbox(videoEl) {
+      const src = videoEl.querySelector('source').src;
+      const lightbox = document.getElementById('video-lightbox');
+      const lightboxVideo = document.getElementById('lightbox-video');
+      lightboxVideo.src = src;
+      lightbox.style.display = 'flex';
+      lightboxVideo.play();
+    }
+
+    function closeVideoLightbox() {
+      const lightbox = document.getElementById('video-lightbox');
+      const lightboxVideo = document.getElementById('lightbox-video');
+      lightboxVideo.pause();
+      lightboxVideo.src = '';
+      lightbox.style.display = 'none';
+    }
+  </script>
+
+  <!-- נגישות בסיסית -->
+  <script>
+    const toggleBtn = document.getElementById('accessibility-toggle');
+    const menu = document.getElementById('accessibility-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    });
+
+    function increaseFont() {
+      document.body.style.fontSize = '18px';
+    }
+
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+    }
+
+    function resetAccessibility() {
+      document.body.style.fontSize = '';
+      document.body.classList.remove('high-contrast');
+    }
+  </script>
 </body>
 </html>
